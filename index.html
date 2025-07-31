@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="뉴욕 한인 여행자들을 위한 최고의 가이드! 맛집, 호텔, 관광지 정보 제공." />
+  <meta property="og:image" content="/images/social-preview.jpg" />
+  <title>KPGUIDE New York 뉴욕여행</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+ <link rel="stylesheet" href="./dist/output.css" />
+
+</head>
+<body>
+  <div class="b-full-bar">
+    <div class="container">
+
+  <!-- 모바일에만 보이는 버튼 -->
+<div class="city-hidden sm:hidden block">
+  <button onclick="document.getElementById('city-menu').classList.toggle('hidden')">
+   도시 선택 <span class="search-icon"><i class="fa-solid fa-bars-sort"></i></span>
+  </button>
+</div>
+
+<!-- 도시 메뉴 리스트 -->
+<ul id="city-menu" class="city-nav sm:flex hidden">
+  <li><a href="#">LA</a></li>
+  <li><a href="#" class="active">NY/NJ</a></li>
+  <li><a href="#">SF</a></li>
+  <li>Seattle</li>
+  <li>Chicago</li>
+  <li>Dallas</li>
+  <li>D.C./Virginia</li>
+  <li>Atlanta</li>
+  <li>Toronto</li>
+  <li>Vancouver</li>
+  <li>Australia</li>
+</ul>
+
+      
+    </div>
+  </div>
+
+ 
+
+
+  <div class="container">
+    <header class="site-header">
+      <a href="/"><img src="./src/images/logo.png" alt="KPGUIDE Logo" class="logo-img" /></a>
+      <div class="search-item">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="검색어 입력" />
+          <span class="search-icon"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+      <div class="login-button">
+        <a href="#" class="auth-button">회원가입</a>
+        <a href="#" class="auth-button">로그인</a>
+      </div>
+    </header>
+
+    <nav class="menu-bar">
+      <ul class="kmenu">
+        <li><a href="#" class="menu-link">홈</a></li>
+        <li class="relative group">
+          <a href="#" class="menu-link">여행</a>
+          <ul class="dropdown">
+            <li><a href="#">꼭 가볼만한 곳</a></li>
+            <li><a href="#">저렴하고 괜찮은 호텔</a></li>
+            <li><a href="#">인기 여행 코스</a></li>
+            <li><a href="#">로컬들만 가는 곳</a></li>
+            <li><a href="#">렌트카</a></li>
+            <li><a href="#">여행 친구 찾기</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="menu-link">맛집</a></li>
+        <li><a href="#" class="menu-link">Korea Friday</a></li>
+        <li><a href="#" class="menu-link">생활정보</a></li>
+        <li><a href="#" class="menu-button">글쓰기</a></li>
+      </ul>
+    </nav>
+    <section>
+      <img src="./src/images/beach.jpg" alt="Main Visual" class="w-full" />
+    </section>
+  </div>
+
+  <main class="container">
+    <div class="main-content">
+      <!-- Left Content -->
+      <div class="main-left">
+      <!-- 꼭 가볼만한 곳 -->
+<section class="section-landmark">
+  <h2 class="landmark-title">꼭 가볼만한곳</h2>
+  
+  <div class="landmark-layout">
+    <!-- 왼쪽 메인 콘텐츠 -->
+    <div class="landmark-main">
+      <a href="#" ><img src="src/images/s-001.jpg" alt="요세미티 국립공원" class="landmark-main-img">
+      <h2 class="landmark-main-heading title-link">요세미티 국립공원 둘러보기</h2>
+      <p class="landmark-main-desc">
+        캘리포니아의 산허리에 파묻혀 있는 요세미티 국립공원은 화강암 절벽과 폭포로 유명합니다. 하프 돔과 엘 캐피탄은 사진작가 안셀 애덤스 덕분에 유명해진 두 개의 암석층입니다. 연중 인기 있는 여행지인 요세미티 국립공원은...
+      </p></a>
+    </div>
+
+    <!-- 오른쪽 카드 -->
+    <div class="landmark-side-cards">
+      <!-- 카드 1 -->
+      <div class="landmark-card">
+        <a href="#" > <img src="src/images/s-001.jpg" alt="랜드마크1" class="landmark-card-img">
+        <h3 class="landmark-card-title title-link">
+          꼭 방문해야 할<br>
+          상징적인 미국의 장소
+        </h3></a>
+      </div>
+      <!-- 카드 2 -->
+      <div class="landmark-card">
+       <a href="#" >  <img src="src/images/s-001.jpg" alt="랜드마크2" class="landmark-card-img">
+        <h3 class="landmark-card-title title-link">
+          꼭 방문해야 할<br>
+          상징적인 미국의 장소
+        </h3></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section-hotel">
+  <div class="hotel-container">
+    <!-- 왼쪽 호텔 카드 영역 -->
+    <div class="hotel-left-wrapper">
+      <h2 class="hotel-title">저렴하고 괜찮은 호텔</h2>
+      <div class="hotel-grid">
+        <!-- 호텔 카드 -->
+        <div class="hotel-card">
+          <a href="#" >  <img src="src/images/s-003.jpg" alt="올랜도" class="hotel-img" />
+          <div class="hotel-body">
+            <h3 class="hotel-name title-link">올랜도</h3>
+            <p class="hotel-desc">월트 디즈니 월드 및 유니버설 스튜디오</p>
+            <div class="hotel-info">
+              <i class="fas fa-plane text-gray-500"></i> $153
+              <i class="fas fa-stopwatch text-gray-500"></i> 2h
+            </div>
+          </div></a>
+        </div>
+        <div class="hotel-card">
+         <a href="#" ><img src="src/images/s-003.jpg" alt="마이애미" class="hotel-img" />
+          <div class="hotel-body">
+            <h3 class="hotel-name title-link" >마이애미</h3>
+            <p class="hotel-desc"><a href="#"> 비치, 아르데코, 리틀 아바나</a></p>
+            <div class="hotel-info">
+              <i class="fas fa-plane text-gray-500"></i> $153
+              <i class="fas fa-stopwatch text-gray-500"></i> 2h
+            </div>
+          </div></a> 
+        </div>
+        <div class="hotel-card">
+         <a href="#" > <img src="src/images/s-003.jpg" alt="디즈니 리조트" class="hotel-img" />
+          <div class="hotel-body">
+            <h3 class="hotel-name title-link">월트 디즈니 월드 리조트</h3>
+            <p class="hotel-desc">유명한 테마파크, 숙소, 상점 등</p>
+            <div class="hotel-info">
+              <i class="fas fa-plane text-gray-500"></i> $153
+              <i class="fas fa-stopwatch text-gray-500"></i> 2h
+            </div>
+          </div></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 오른쪽 TOP 5 리스트 -->
+    <aside class="hotel-sidebar">
+      <div class="top5-box">
+        <div class="top5-title">
+          <i class="fas fa-flag-usa text-[#8ed0ff]"></i> TOP 5 THINGS TO DO IN NEW YORK
+        </div>
+        <ol class="top5-list">
+          <li><a href="#">올랜도</a></li>
+          <li><a href="#">뉴욕</a></li>
+          <li><a href="#">마이애미</a></li>
+          <li><a href="#">캘리포니아</a></li>
+          <li><a href="#">나이아가라폴</a></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+<section class="section-food">
+  <h2 class="food-section-title">맛집추천</h2>
+
+  <div class="food-grid">
+    <!-- 카드 1 -->
+   <a href="#"><div class="food-card">
+     <img src="src/images/s-002.jpg" alt="음식1" class="food-img" />
+      <div class="food-body">
+        <h3 class="food-name title-link">Sea Fire Grill</h3>
+        <p class="food-type">스테이크하우스, 해산물 · $$$$</p>
+        <ul class="food-tags">
+          <li>“예약하고 방문하세요!”</li>
+          <li>“신선한 해산물이 좋음”</li>
+          <li>“신선한 해산물이 좋음”</li>
+        </ul>
+      </div>
+    </div></a>
+
+    <!-- 카드 2 -->
+    <a href="#"><div class="food-card">
+     <img src="src/images/s-002.jpg" alt="음식1" class="food-img" />
+      <div class="food-body">
+        <h3 class="food-name title-link">Sea Fire Grill</h3>
+        <p class="food-type">스테이크하우스, 해산물 · $$$$</p>
+        <ul class="food-tags">
+          <li>“예약하고 방문하세요!”</li>
+          <li>“신선한 해산물이 좋음”</li>
+          <li>“신선한 해산물이 좋음”</li>
+        </ul>
+      </div>
+    </div></a>
+
+    <!-- 카드 3 -->
+    <a href="#"><div class="food-card">
+     <img src="src/images/s-002.jpg" alt="음식1" class="food-img" />
+      <div class="food-body">
+        <h3 class="food-name title-link">Sea Fire Grill</h3>
+        <p class="food-type">스테이크하우스, 해산물 · $$$$</p>
+        <ul class="food-tags">
+          <li>“예약하고 방문하세요!”</li>
+          <li>“신선한 해산물이 좋음”</li>
+          <li>“신선한 해산물이 좋음”</li>
+        </ul>
+      </div>
+    </div></a>
+
+    <!-- 카드 4 -->
+     <a href="#"><div class="food-card">
+     <img src="src/images/s-002.jpg" alt="음식1" class="food-img" />
+      <div class="food-body">
+        <h3 class="food-name title-link">Sea Fire Grill</h3>
+        <p class="food-type">스테이크하우스, 해산물 · $$$$</p>
+        <ul class="food-tags">
+          <li>“예약하고 방문하세요!”</li>
+          <li>“신선한 해산물이 좋음”</li>
+          <li>“신선한 해산물이 좋음”</li>
+        </ul>
+      </div>
+    </div></a>
+
+  </div>
+</section>
+
+<section class="section-travel">
+  <div class="travel-grid">
+    <!-- 인기 여행 코스 (3개 카드) -->
+    <div class="travel-title-s">
+      <h2 class="course-section-title ">
+ 
+        인기 여행 코스
+      </h2>
+   
+      <div class="travel-box">
+        <!-- 카드 1 -->
+        <a href="#"><div class="travel-card">
+          <img src="src/images/s-001.jpg" alt="올랜도" class="travel-img" />
+          <div class="travel-body">
+            <h3 class="travel-title title-link">올랜도</h3>
+            <p class="travel-desc">월트 디즈니 월드 및 유니버설 스튜디오</p>
+            <div class="travel-info">
+              <i class="fas fa-plane text-gray-500 "></i> $100
+              <i class="fas fa-stopwatch text-gray-500 "></i> 2h
+            </div>
+          </div>
+        </div></a>
+
+        <!-- 카드 2 -->
+        <a href="#"><div class="travel-card">
+          <img src="src/images/s-001.jpg" alt="올랜도" class="travel-img" />
+          <div class="travel-body">
+            <h3 class="travel-title title-link">올랜도</h3>
+            <p class="travel-desc">월트 디즈니 월드 및 유니버설 스튜디오</p>
+            <div class="travel-info">
+              <i class="fas fa-plane text-gray-500 "></i> $100
+              <i class="fas fa-stopwatch text-gray-500 "></i> 2h
+            </div>
+          </div>
+        </div></a>
+
+        <!-- 카드 3 -->
+       <a href="#"><div class="travel-card">
+          <img src="src/images/s-001.jpg" alt="올랜도" class="travel-img" />
+          <div class="travel-body">
+            <h3 class="travel-title title-link">올랜도</h3>
+            <p class="travel-desc">월트 디즈니 월드 및 유니버설 스튜디오</p>
+            <div class="travel-info">
+              <i class="fas fa-plane text-gray-500 "></i> $100
+              <i class="fas fa-stopwatch text-gray-500 "></i> 2h
+            </div>
+          </div>
+        </div></a>
+      </div>
+    </div>
+
+    <!-- 생활 꿀팁 -->
+    <aside class="life-tip-layout">
+      <div class="life-tip-box">
+        <h3 class="life-tip-title">생활 꿀팁</h3>
+
+        
+        <ul class="life-tip-list">
+          <li><a href="#" class="life-tip-link">여름철 불청객, 모기 쫓는 생활 꿀팁</a></li>
+          <li><a href="#" class="life-tip-link">“욕실 물때·부엌 기름때 없애려면</a></li>
+          <li><a href="#" class="life-tip-link">여름철 불청객, 모기 쫓는 생활 꿀팁</a></li>
+          <li><a href="#" class="life-tip-link">“욕실 물때·부엌 기름때 없애려면</a></li>
+          <li><a href="#" class="life-tip-link">여름철 불청객, 모기 쫓는 생활 꿀팁</a></li>
+          <li><a href="#" class="life-tip-link">여름철 불청객, 모기 쫓는 생활 꿀팁</a></li>
+        </ul>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+      </div>
+
+      <!-- Right Sidebar -->
+      <aside class="sidebar-wrapper">
+        <!-- KP TV   -->
+    <div class="mt-12">
+      <h2 class="kp-title">KP TV</h2>      
+       <iframe width="100%" height="180" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- 📺 ad box -->
+  <div class="section-ad">
+    ad ops
+  </div>
+
+  <!-- 🎵 Korea Friday 박스 -->
+  <div class="section-korea-friday">
+    <div class="kf-section-title">
+      Korea Friday
+    </div>
+
+    <!-- 이벤트 카드 1 -->
+    <div class="kf-card-event border-b">
+      <div class="relative">
+        <img src="src/images/s-001.jpg" alt="Sub Urban" class="kf-card-image" />
+        <div class="kf-card-button">▶</div>
+      </div>
+      <div class="kf-event-card">
+        <div class="kf-event-date">📅 2025년 6월 25일 수요일</div>
+        <div class="kf-event-title">Sub Urban</div>
+        <div class="kf-event-info">Pearl Street Warehouse,<br/>Washington, DC</div>
+        <button class="kf-event-button">얼터너티브</button>
+      </div>
+    </div>
+
+    <!-- 이벤트 카드 2 -->
+    <div class="kf-card-event">
+      <div class="relative">
+        <img src="src/images/s-001.jpg" alt="BAEKHYUN" class="kf-card-image" />
+        <div class="kf-card-button">▶</div>
+      </div>
+      <div class="kf-event-card">
+        <div class="kf-event-date">📅 Wednesday, June 25, 2025</div>
+        <div class="kf-event-title">BAEKHYUN</div>
+        <div class="kf-event-info">Rosemont Theatre,<br/>Rosemont, IL</div>
+        <button class="kf-event-button">K-Pop</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- 인기 블로그 -->
+<section class="blog-list-widget">
+  <h2 class="blog-list-title">인기 블로그</h2>
+  <ul class="blog-list">
+    <!-- 블로그 항목 -->
+   <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">1.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+
+  <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">2.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+
+   <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">3.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+
+   <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">4.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+     <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">5.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+  </ul>
+</section>
+
+
+
+<section class="rentcar-widget">
+  <h2 class="rentcar-title">렌트카</h2>
+  <div class="rentcar-grid">
+    <!-- 차량 1 -->
+    <div class="rentcar-card">
+      <img src="src/images/s-001.jpg" alt="Chevrolet Spark" class="rentcar-img" />
+      <p class="rentcar-brand">Hertz</p>
+      <p class="rentcar-model">Chevrolet Spark</p>
+      <p class="rentcar-type">or similar Small</p>
+      <div class="rentcar-info">
+        <span>👤 2</span><span>💼 2</span><span>🚪 2/4</span>
+      </div>
+      <div class="rentcar-footer">
+        <span class="rentcar-price">$38 <span class="rentcar-unit">/day</span></span>
+        <button class="rentcar-btn">View Deal</button>
+      </div>
+    </div>
+
+    <!-- 차량 2 -->
+    <div class="rentcar-card">
+      <img src="src/images/s-001.jpg" alt="Nissan Sentra" class="rentcar-img" />
+      <p class="rentcar-brand">TURO</p>
+      <p class="rentcar-model">Nissan Sentra</p>
+      <p class="rentcar-type">or similar Small</p>
+      <div class="rentcar-info">
+        <span>👤 4</span><span>💼 2</span><span>🚪 4-5</span>
+      </div>
+      <div class="rentcar-footer">
+        <span class="rentcar-price">$35 <span class="rentcar-unit">/day</span></span>
+        <button class="rentcar-btn">View Deal</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- 렌트카 섹션 -->
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    
+    <!-- 좌측 -->
+    <div class="footer-left">
+      <h1 class="footer-logo">KOREAPORTAL</h1>
+    </div>
+
+    <!-- 우측 -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="#">업소록</a>
+        <a href="#">마켓플레이스</a>
+        <a href="#">K-Wave팬클럽</a>
+        <a href="#">오픈보드</a>
+        <a href="#">교육</a>
+        <a href="#">지역정보</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 💡 점선: footer-inner 밖에서 전체 너비로! -->
+  <div class="footer-divider"></div>
+
+  <!-- 아래 회사정보 -->
+  <div class="container">
+    <div class="footer-left">
+      <div class="footer-links">
+        <a href="#">회사소개</a> |
+        <a href="#">이용약관</a> |
+        <a href="#">개인정보정책</a> |
+        <a href="#">제휴안내</a> |
+        <a href="#">광고안내</a> |
+        <a href="#">고객센터</a>
+      </div>
+      <div class="footer-address">
+        LA OFFICE 3450 Wilshire Blvd. #1210, Los Angeles, CA 90010 TEL 646-663-1510<br />
+        ©2025 ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
