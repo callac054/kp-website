@@ -6,7 +6,6 @@
   <meta name="description" content="뉴욕 한인 여행자들을 위한 최고의 가이드! 맛집, 호텔, 관광지 정보 제공." />
   <meta property="og:image" content="/images/social-preview.jpg" />
   <title>KPGUIDE New York 뉴욕여행</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
  <link rel="stylesheet" href="dist/output.css" />
 
@@ -47,12 +46,24 @@
   <div class="container">
     <header class="site-header">
       <a href="/"><img src="./src/images/logo.png" alt="KPGUIDE Logo" class="logo-img" /></a>
-      <div class="search-item">
+   <!--  <div class="search-item">
         <div class="search-bar">
           <input type="text" class="search-input" placeholder="검색어 입력" />
           <span class="search-icon"><i class="fas fa-search"></i></span>
-        </div>
-      </div>
+        </div> 
+
+      </div>-->
+ <!-- SearchBar 컴포넌트 -->
+<form class="search-bar">
+  <input type="text" name="query"  placeholder="검색어를 입력하세요"  class="search-bar__input" />
+  <button type="submit" class="search-bar__button">
+    <!-- 인라인 SVG 아이콘 (접근성 향상) -->
+    <svg  xmlns="http://www.w3.org/2000/svg"   class="search-bar__icon"  fill="none"  viewBox="0 0 24 24" stroke="currentColor"
+      stroke-width="2" >
+      <path stroke-linecap="round" stroke-linejoin="round"  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 7.5 7.5a7.5 7.5 0 0 0 9.15 9.15z"  />
+    </svg>
+  </button>
+</form>
       <div class="login-button">
         <a href="#" class="auth-button">회원가입</a>
         <a href="#" class="auth-button">로그인</a>
