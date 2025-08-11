@@ -1339,7 +1339,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   padding: 0.75rem;
@@ -1370,7 +1369,6 @@ body {
 .food-img {
   height: 8rem;
   width: 100%;
-  border-radius: 0.25rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
