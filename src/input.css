@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 @layer components {
-  .container {
-    @apply max-w-[1360px] mx-auto px-4 sm:px-6 lg:flex-row justify-between gap-y-6;
+  .site-container {
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6;
   }
 
   .main-content {
     @apply grid grid-cols-1 md:grid-cols-12 gap-4;
   }
 
+  
   .main-left {
     @apply md:col-span-8;
   }
@@ -45,11 +46,11 @@
     @apply w-full bg-blue-800 text-white p-2;
   }
 
-  .city-hidden { 
-    @apply  text-white py-2 text-xs;
+  .city-label { 
+    @apply  text-white py-2 text-base;
   }
   .city-nav {
-    @apply  flex-wrap justify-end gap-3 text-white text-xs space-y-2 sm:space-y-1 md:space-y-0;
+    @apply  flex-wrap justify-end gap-3 text-white text-base space-y-2 sm:space-y-1 md:space-y-0;
   }
   
  .city-nav a {
@@ -58,56 +59,100 @@
   .city-nav li a.active{
       @apply text-blue-200 border-b-2 border-blue-700;
   }
-    /* === 헤더 === */
-  .site-header {
-    @apply w-full bg-white py-6 flex flex-col md:flex-row items-center justify-between gap-4;
+ /* === 헤더 === */
+  
+ .site-header {
+    @apply w-full bg-white py-4 md:py-6 flex flex-col md:flex-row items-center justify-between gap-4 ;
   }
-  .logo-img {
-    @apply h-5 sm:h-7 w-auto object-contain;
+  
+
+.logo { @apply flex items-center gap-2 shrink-0 min-w-[120px] md:min-w-[150px]; }
+
+.logo-img { 
+  height: clamp(24px, 3.5vw, 25px);
+  width: auto;
+  object-fit: contain;
+  display:block; 
+} 
+
+
+/* SearchBar  */
+
+ .header-search { 
+  @apply order-3 w-full min-w-0 md:order-none md:flex-1;
+  max-width: clamp(28rem, 50vw, 44rem);
   }
-  .search-bar {
-    @apply w-full max-w-md relative;
+  .search-bar { 
+    @apply flex w-full border-2 border-blue-600 rounded-lg overflow-hidden; /* 순수 모양만 */
   }
-  .search-item {
-  @apply flex-1 flex items-center justify-center;
-  }
-  .search-input {
-    @apply w-full pl-4 pr-10 py-2 border text-sm shadow-sm;
-  }
-  .search-icon {
-    @apply absolute right-3 top-1.5 text-gray-400;
-  }
+
+
+.search-bar__input {
+  @apply flex-grow
+         px-4 py-2
+         focus:outline-none;
+}
+
+.search-bar__button {
+  @apply flex items-center justify-center
+         bg-blue-600 px-4 py-2;
+}
+
+.search-bar__icon {
+  @apply w-5 h-5 text-white;
+}
   .auth-button {
-    @apply px-4 py-2 border border-gray-400 text-gray-800 rounded-full text-xs hover:bg-gray-100;
+    @apply shrink-0 px-4 py-2 border border-gray-400 text-gray-800 rounded-full text-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400;
   }
-  .login-button { @apply flex gap-4; }
+  .login-button { @apply shrink-0 flex gap-4; }
 
-    /* === 메뉴 바 (메인 내비게이션) === */
-  .menu-bar {
-    @apply bg-white border-t border-blue-100 py-2 px-2 bg-[repeating-linear-gradient(45deg,#f3f6fb_0px,#f3f6fb_2px,#ffffff_2px,#ffffff_4px)];
-  }
-  .menu-bar .kmenu{
-  @apply flex flex-wrap justify-between sm:justify-center text-sm sm:text-base space-x-10 text-[#3c5396] font-bold;
-  }
-
-  .menu-link {
-    @apply text-[#3c5396] font-semibold text-sm hover:text-blue-600;
-  }
-  .menu-button {
-    @apply bg-blue-800 text-white px-5 py-2 hover:bg-blue-900 transition duration-150 ;
-  }
-
-  .group:hover .dropdown {
-    @apply block;
-  }
-  .dropdown {
-    @apply absolute hidden left-1/2 -translate-x-1/2 mt-2 bg-blue-800 shadow-lg rounded-md py-2 w-56 z-50 flex flex-col text-left;
-  }
-  .dropdown li a {
-    @apply block px-4 py-2 text-sm text-white hover:bg-blue-800;
-  }
+  
+/* ===== Main Menu (full-width, equal spacing) ===== */
+.main-menu {
+  @apply w-full bg-white border-gray-200 border-y sticky top-0 z-50;
+  /* 필요시 고정 상단
+  @apply ;
+  */
+}
 
 
+/* 링크: 박스 전체 클릭, 수직/수평 중앙정렬, 높이 고정 */
+.main-menu__link {
+  @apply flex items-center justify-center
+         h-12 px-3
+         text-gray-800 font-medium tracking-tight
+         transition-colors duration-150
+         whitespace-nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+/* Hover/Focus */
+.main-menu__link:hover,
+.main-menu__link:focus-visible {
+  @apply bg-blue-800 text-white ring-2 ring-blue-300; 
+}
+
+
+.main-menu__link--active,
+.main-menu__link[aria-current="page"] {
+  @apply bg-blue-800 text-white;
+}
+
+
+/* 모바일: 그리드로 여러 줄 배치 */
+.main-menu__list {
+  @apply grid w-full gap-1 grid-cols-3;     /* 3개씩 줄바꿈 */
+}
+/* 조금 넓어지면 4개씩 */
+@screen sm {
+  .main-menu__list { @apply grid-cols-4; }
+}
+/* 데스크톱 이상: 한 줄에 꽉 차게 균등 분배 */
+@screen md {
+  .main-menu__list {
+    @apply grid-flow-col auto-cols-fr gap-0; /* equal width tabs */
+    grid-template-columns: none;             /* grid-cols-* 해제 */
+  }
+}
   /* === 섹션 타이틀=== */
  .section-landmark { 
      @apply mt-8;
@@ -131,7 +176,7 @@
   }
 
   .landmark-layout {
-    @apply flex flex-col lg:flex-row gap-6;
+    @apply flex flex-col lg:flex-row gap-4;
   }
 
   .landmark-main {
@@ -171,21 +216,13 @@
   }
 }
 
-  /* === 저렴하고 괜찮은 호텔, top thins to do in new york=== */
-
- 
-
  
 
   /* === 카드 레이아웃 (호텔, 맛집, 여행코스 공통) === */
  @layer components {
   
 
-  .hotel-container {
-    @apply flex flex-col lg:flex-row justify-between gap-5;
-  }
-
-  .hotel-left {
+ .hotel-left {
     @apply flex-1;
   }
 
@@ -193,10 +230,8 @@
     @apply text-xl font-bold mb-4 border-l-4 border-blue-900 pl-2;
   }
 
-  .hotel-grid {
-    @apply grid grid-cols-1 sm:grid-cols-3 gap-4;
-  }
-
+ .hotel-container { @apply grid grid-cols-1 lg:grid-cols-12 gap-6 items-start; }
+ .hotel-grid      { @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4; }
   .hotel-card {
     @apply bg-white rounded overflow-hidden shadow hover:shadow-md transition;
   }
@@ -206,7 +241,7 @@
   }
 
   .hotel-body {
-    @apply p-3 text-sm;
+    @apply p-3 text-base;
   }
 
   .hotel-name {
@@ -214,7 +249,7 @@
   }
 
   .hotel-desc {
-    @apply text-gray-600 text-xs;
+    @apply text-gray-600 text-sm;
   }
 
   .hotel-info {
@@ -229,7 +264,7 @@
   }
 
   .top5-list {
-    @apply list-decimal px-7 py-5 text-sm text-gray-800 space-y-3 font-medium;
+    @apply list-decimal px-7 py-5 text-base text-gray-800 space-y-3 font-medium;
   }
 
   .top5-link {
@@ -260,15 +295,15 @@
   }
 
   .food-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
   }
 
 .food-card {
-  @apply bg-white rounded shadow p-3 flex flex-col md:flex-row gap-3 hover:bg-gray-100 hover:shadow-md transition;
+  @apply bg-white  shadow p-3 flex flex-col md:flex-row gap-3 hover:bg-gray-100 hover:shadow-md transition;
 }
 
 .food-img {
-  @apply w-full h-32 object-cover rounded md:w-40 md:h-40;
+  @apply w-full h-32 object-cover md:w-40 md:h-40;
 }
 
 .food-body {
@@ -276,15 +311,15 @@
 }
 
   .food-name {
-    @apply font-semibold text-sm mb-1;
+    @apply font-semibold text-base mb-1;
   }
 
   .food-type {
-    @apply text-xs text-gray-600;
+    @apply text-base text-gray-600;
   }
 
   .food-tags {
-    @apply text-xs text-gray-500 mt-1 space-y-0.5 list-disc list-inside;
+    @apply text-sm text-gray-500 mt-1 space-y-0.5 list-disc list-inside;
   }
 
 
@@ -297,13 +332,13 @@
   /* 여행 카드 공통 */
  
   .travel-grid {
-    @apply flex flex-col lg:flex-row justify-between gap-5;
+    @apply flex flex-col lg:flex-row justify-between gap-4;
   }
   .travel-title-s{ 
-    @apply flex-1  
+    @apply flex-1; 
   }
   .travel-box { 
-    @apply grid grid-cols-1 sm:grid-cols-3 gap-4
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-4;
     
   }
   .travel-card {
@@ -315,7 +350,7 @@
   }
 
   .travel-body {
-    @apply p-3 text-sm;
+    @apply p-3 text-base;
   }
 
   .travel-title {
@@ -323,7 +358,7 @@
   }
 
   .travel-desc {
-    @apply text-gray-600 text-xs;
+    @apply text-gray-600 text-sm;
   }
 
   .travel-info {
@@ -332,7 +367,7 @@
 
   /* 생활 꿀팁 박스 */
   .life-tip-layout { 
-    @apply w-full lg:w-64 flex-shrink-0 pt-11
+    @apply w-full lg:w-64 flex-shrink-0 pt-11;
   }
   .life-tip-box {
     @apply bg-[repeating-linear-gradient(45deg,#f5f5f5_0px,#f5f5f5_2px,#ffffff_2px,#ffffff_4px)] rounded shadow-sm overflow-hidden;
@@ -343,7 +378,7 @@
   }
 
   .life-tip-list {
-    @apply list-disc px-6 py-5 text-sm text-gray-700 space-y-2;
+    @apply list-disc px-6 py-5 text-base text-gray-700 space-y-2;
   }
 
   .life-tip-link {
@@ -352,7 +387,7 @@
   
   /* === kp tv, ad, Korea Friday 박스==== */
   .kp-title {
-    @apply text-sm font-semibold mb-2 mt-8;
+    @apply text-base font-semibold mb-1 mt-8;
   }
   .section-ad {  
     @apply bg-gray-200 h-48 flex items-center justify-center rounded shadow text-gray-500 text-lg;
@@ -362,7 +397,7 @@
   }
 
   .kf-card-image {
-   @apply w-20 h-20 object-cover rounded
+   @apply w-20 h-20 object-cover rounded;
    }
   .kf-card-button { 
     @apply absolute bottom-2 left-2 bg-black text-white w-5 h-5 text-[10px] flex items-center justify-center rounded-full;
@@ -417,20 +452,20 @@
   }
 
   .blog-list-headline {
-    @apply font-semibold text-sm leading-tight;
+    @apply font-semibold text-base leading-tight;
   }
 
   .blog-list-desc {
-    @apply text-xs text-gray-500;
+    @apply text-sm text-gray-500;
   }
 
  /* === 렌트카 === */
   .rentcar-widget {
-    @apply py-4;
+    @apply pb-4;
   }
 
   .rentcar-title {
-    @apply text-orange-500 font-bold text-lg mb-4;
+    @apply text-orange-500 font-bold text-lg mb-2;
   }
 
   .rentcar-grid {
@@ -535,4 +570,82 @@
     @apply hover:text-black whitespace-nowrap;
   }
  }
+  /* === restaurant === */
 
+ @layer components {
+
+  .main-menu__link--w { 
+    @apply text-white bg-indigo-700;}
+
+  /* 컨테이너 */
+  .res-site-container {
+    @apply max-w-[1400px] mx-auto px-4 sm:px-6;
+  } 
+
+   .res-site-grid { @apply grid gap-6 grid-cols-1 lg:grid-cols-[220px_minmax(0,1fr)_300px] xl:grid-cols-[220px_minmax(0,1fr)_360px]; }
+  /* 3컬럼 레일들 */
+  .left-rail  { @apply order-2 lg:order-1; }
+  .main-rail  { @apply space-y-8 min-w-0 order-1 lg:order-2; }
+  .right-rail { @apply min-w-0 order-3 lg:order-3 space-y-6; }
+
+
+
+  /* 왼쪽 네비 박스 */
+  .left-rail__nav       { @apply bg-gray-100 p-4 space-y-6 pt-7; }
+  .left-rail__titlebar  { @apply flex items-center justify-between border-b border-gray-300; }
+  .left-rail__title     { @apply text-gray-700 font-semibold; }
+
+  /* 리스트 & 불릿(작은 주황 네모) */
+  .kp-list        { @apply list-none space-y-2; }
+  .kp-list__item  { @apply flex items-center text-[15px] text-gray-600; }
+  .kp-bullet      { @apply inline-block w-1.5 h-1.5 bg-orange-500 mr-2 rounded-sm; }
+
+  /* 광고 박스 */
+  .ad-box { @apply mt-6 bg-gray-300 flex items-center justify-center h-[500px]; }
+
+
+  /* 섹션 헤더(메인) */
+  .section-bar { @apply my-4 flex items-end justify-between border-b border-gray-300; }
+
+
+  /* 카드 그리드/카드 */
+  .res-card-grid { @apply grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3; }
+  .res-card{ @apply bg-white shadow overflow-hidden rounded;}
+  .res-card-img { @apply w-full h-36 object-cover; }
+  .res-card-body { @apply p-4;}
+  .res-card-title { @apply font-bold text-sm;}
+  .res-card-subtitle { @apply text-gray-600 text-sm; }
+  .res-card-rating { @apply flex items-center mt-2; }
+  .res-card-review-count { @apply ml-2 text-sm text-gray-500; }
+  .res-card-provider {  @apply text-xs text-gray-400 mt-2; }
+  
+  
+  
+  .best-item { @apply py-6 border-b border-gray-200; }
+
+  .resto-section { @apply my-4 flex items-end justify-between border-b border-gray-300; }
+  .resto-section-title { @apply text-2xl font-bold;}
+  .resto-section-link { @apply text-sm text-gray-600 hover:underline; }
+
+  .best-thumb { @apply shrink-0 block w-full sm:w-[320px] h-[180px] sm:h-[200px] overflow-hidden rounded; }
+  .best-thumb > img { @apply w-full h-full object-cover; }
+
+  
+
+  .best-row { @apply flex flex-col md:flex-row gap-4 md:gap-5; }
+  .best-body { @apply min-w-0 flex-1 space-y-2; }
+
+  .best-head { @apply flex items-start justify-between gap-3; }
+  .best-title { @apply text-xl font-bold; }
+
+  .best-meta { @apply flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-600; }
+  .best-review { @apply flex items-center gap-1 text-green-600; }
+  .best-dot  { @apply text-gray-400; } /* 구분점 “·”용 */
+
+  .best-notes { @apply text-sm text-gray-700 space-y-1; }
+
+  .best-cta { @apply flex flex-wrap gap-3 pt-2; }
+  .btn-pill { @apply inline-flex items-center rounded-full bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 text-sm font-semibold; }
+
+
+}

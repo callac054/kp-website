@@ -75,13 +75,13 @@
     <nav aria-label="Primary">
       <ul class="main-menu__list">
         <li class="main-menu__item">
-          <a href="/" class="main-menu__link main-menu__link--active" aria-current="page">홈</a>
+          <a href="/" class="main-menu__link">홈</a>
         </li>
         <li class="main-menu__item">
           <a href="/news" class="main-menu__link">여행</a>
         </li>
         <li class="main-menu__item">
-          <a href="/community" class="main-menu__link">맛집</a>
+          <a href="/community" class="main-menu__link main-menu__link--active" aria-current="page">맛집</a>
         </li>
         <li class="main-menu__item">
           <a href="/events" class="main-menu__link">Korea Friday</a>
@@ -90,7 +90,7 @@
           <a href="/travel" class="main-menu__link">생활정보</a>
         </li>
          <li class="main-menu__item">
-          <a href="/travel" class="main-menu__link main-menu__link--active">글쓰기</a>
+          <a href="/travel" class="main-menu__link main-menu__link--w">글쓰기</a>
         </li>
       </ul>
     </nav>
@@ -101,330 +101,413 @@
       <img src="./src/images/restaurant.jpg" alt="Main Visual" class="w-full" />
     </section>
 <!-- ✅ Page Container -->
-<div class="site-container">
-
-  <!-- ✅ 3-Column Grid: [LEFT NAV | MAIN | RIGHT ASIDE] -->
-  <!-- xl 이상: 240px | 1fr | 360px  /  lg: 1fr | 320px  /  md 이하: 1열 -->
-  <div class="grid gap-6 grid-cols-1
-  lg:grid-cols-[160px_minmax(0,1fr)_200px] 
-  xl:grid-cols-[180px_minmax(0,1fr)_260px]">
-
+<div class="res-site-container">
+  
+  <div class="res-site-grid">
     <!-- ◀ LEFT NAV (xl 이상에서 보이기) -->
-    <aside class="bg-gray-100 p-4 min-w-0 order-1  order-2 lg:order-1">
-      <nav class="top-6 space-y-6">
-        <div>
-          <h3 class="mb-2 text-sm font-semibold text-gray-700 border-gray-300 border-b">여행</h3>
-          <ul class="space-y-1 text-[15px] list-disc list-inside marker:text-red-200">
-            <li><a href="#" class="hover:underline">꼭 가볼만한 곳</a></li>
-            <li><a href="#" class="hover:underline">저렴하고 괜찮은 호텔</a></li>
-            <li><a href="#" class="hover:underline">인기 여행 코스</a></li>
-            <li><a href="#" class="hover:underline">로컬들만 가는 곳</a></li>
-            <li><a href="#" class="hover:underline">렌트카</a></li>
-            <li><a href="#" class="hover:underline">여행 친구 찾기</a></li>
-          </ul>
-        </div>
+    <aside class="left-rail">
+      <nav class="left-rail__nav">
+      <section>
+        <div class="left-rail__titlebar">
+            <h3 class="left-rail__title">여행</h3>
+            <i class="fa-solid fa-hotel text-orange-500 text-2xl"></i>
+       </div>
 
-        <div>
-          <h3 class="mb-2 text-sm font-semibold text-gray-700  border-gray-300 border-b">맛집</h3>
-          <ul class="space-y-1 text-[15px] list-disc list-inside marker:text-red-200">
-            <li><a href="#" class="hover:underline">브런치 맛집</a></li>
-            <li><a href="#" class="hover:underline">유명 커피숍</a></li>
-            <li><a href="#" class="hover:underline">로컬들만 가는 맛집</a></li>
-            <li><a href="#" class="hover:underline">한식 맛집</a></li>
-            <li><a href="#" class="hover:underline">추천 맛집</a></li>
-          </ul>
-        </div>
 
-          <div>
-          <h3 class="mb-2 text-sm font-semibold text-gray-700  border-gray-300 border-b">Korea Friday</h3>
-          <ul class="space-y-1 text-[15px] list-disc list-inside marker:text-red-200">
-            <li><a href="#" class="hover:underline">콘서트 티켓/로컬 업소 쿠폰</a></li>
+          <ul class="kp-list">
+            <li class="kp-list__item"><span class="kp-bullet"></span>꼭 가볼만한 곳</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>저렴하고 괜찮은 호텔</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>인기 여행 코스</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>로컬들만 가는 곳</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>렌트카</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>여행 친구 찾기</li>
           </ul>
-        </div>
-        <div>
-          <h3 class="mb-2 text-sm font-semibold text-gray-700  border-gray-300 border-b">생활정보</h3>
-          <ul class="space-y-1 text-[15px] list-disc list-inside marker:text-red-200">
-            <li><a href="#" class="hover:underline">이것저것 공유</a></li>
-            <li><a href="#" class="hover:underline">똑똑한 서비스</a></li>
-            <li><a href="#" class="hover:underline">생활 꿀팁</a></li>
-            <li><a href="#" class="hover:underline">랜선 집들이</a></li>
+        </section>
+       
+      <section>
+            <div class="left-rail__titlebar">
+            <h3 class="left-rail__title">맛집</h3>
+            <i class="text-orange-500 fa-solid fa-mug-saucer"></i>
+            </div>
+
+          <ul class="kp-list">
+            <li class="kp-list__item"><span class="kp-bullet"></span>브런치 맛집</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>유명 커피숍</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>로컬들만 가는 맛집</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>한식 맛집</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>추천 맛집</li>
           </ul>
-        </div>
+      </section>
+
+   <section>
+          <div class="left-rail__titlebar">
+            <h3 class="left-rail__title">Korea Friday</h3>
+            <i class="text-orange-500 fa-solid fa-ticket"></i>
+          </div>
+
+          <ul class="kp-list">
+            <li class="kp-list__item"><span class="kp-bullet"></span>콘서트 티켓/로컬 업소 쿠폰</li>
+          </ul>
+  </section>
+   <section>      
+          <div class="left-rail__titlebar">
+            <h3 class="left-rail__title">생활정보</h3>
+            <i class="text-orange-500 fa-solid  fa-tv"></i>
+          </div>
+
+
+          <ul class="kp-list">
+            <li class="kp-list__item"><span class="kp-bullet"></span>이것저것 공유</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>똑똑한 서비스</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>생활 꿀팁</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>랜선 집들이</li>
+          </ul>
+        </section> 
 
       </nav>
+       <!-- 📺 ad box -->
+   <div class="ad-box">
+      <span class="text-gray-400 text-lg">Ad ops</span>
+    </div>
     </aside>
 
     <!-- ■ MAIN CONTENT -->
-    <main class="space-y-8 min-w-0 lg:order-2">
+    <main class="main-rail">
        <!-- 브런치 맛집 -->
      <section>
-     <div class="my-4 flex items-end justify-between border-b border-gray-300">
-          <h2 class="text-2xl font-bold">브런치 맛집</h2>
-          <a href="#" class="text-sm text-gray-600 hover:underline">더 보기</a>
-      </div>
+      <div class="resto-section">
+          <h2 class="resto-section-title">브런치 맛집</h2>
+          <a href="#" class="resto-section-link">더 보기</a>
+  </div>
 
-      <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="res-card-grid">
         
   <!-- 카드 반복 -->
-  <div class="bg-white shadow overflow-hidden">
-    <img src="src/images/restaurant.jpg" alt="음식" class="w-full h-36 object-cover">
-    <div class="p-4">
-      <h3 class="font-bold text-sm">Gustavo's Venezuelan Din...</h3>
-      <p class="text-gray-600 text-sm">베네수엘라, 남미 요리</p>
-      <div class="flex items-center mt-2">
+<article class="res-card">
+ <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
+    <div class="res-card-body">
+      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
+      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
+      <div class="res-card-rating">
         <span class="text-green-600">●●●●</span>
-        <span class="ml-2 text-sm text-gray-500">12</span>
+        <span class="res-card-review-count">12</span>
       </div>
-      <p class="text-xs text-gray-400 mt-2">제공: EatWith</p>
+      <p class="res-card-provider">제공: EatWith</p>
     </div>
-  </div>
-    <div class="bg-white shadow overflow-hidden">
-    <img src="src/images/restaurant.jpg" alt="음식" class="w-full h-36 object-cover">
-    <div class="p-4">
-      <h3 class="font-bold text-sm">Gustavo's Venezuelan Din...</h3>
-      <p class="text-gray-600 text-sm">베네수엘라, 남미 요리</p>
-      <div class="flex items-center mt-2">
+ </article>
+ <article class="res-card">
+ <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
+    <div class="res-card-body">
+      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
+      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
+      <div class="res-card-rating">
         <span class="text-green-600">●●●●</span>
-        <span class="ml-2 text-sm text-gray-500">12</span>
+        <span class="res-card-review-count">12</span>
       </div>
-      <p class="text-xs text-gray-400 mt-2">제공: EatWith</p>
+      <p class="res-card-provider">제공: EatWith</p>
     </div>
-  </div>
-   <div class="bg-white  shadow overflow-hidden">
-    <img src="src/images/restaurant.jpg" alt="음식" class="w-full h-36 object-cover">
-    <div class="p-4">
-      <h3 class="font-bold text-sm">Gustavo's Venezuelan Din...</h3>
-      <p class="text-gray-600 text-sm">베네수엘라, 남미 요리</p>
-      <div class="flex items-center mt-2">
+ </article>
+<article class="res-card">
+ <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
+    <div class="res-card-body">
+      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
+      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
+      <div class="res-card-rating">
         <span class="text-green-600">●●●●</span>
-        <span class="ml-2 text-sm text-gray-500">12</span>
+        <span class="res-card-review-count">12</span>
       </div>
-      <p class="text-xs text-gray-400 mt-2">제공: EatWith</p>
+      <p class="res-card-provider">제공: EatWith</p>
     </div>
-  </div>
+ </article>
       </div>
     </section>
 
     <!-- 로컬 맛집 -->
      <section>
-     <div class="my-4 flex items-end justify-between border-b border-gray-300">
-          <h2 class="text-2xl font-bold">로컬 맛집</h2>
-          <a href="#" class="text-sm text-gray-600 hover:underline">더 보기</a>
-      </div>
+    <div class="resto-section">
+          <h2 class="resto-section-title">로컬 맛집</h2>
+          <a href="#" class="resto-section-link">더 보기</a>
+  </div>
 
-      <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+      <div class="res-card-grid">
         
   <!-- 카드 반복 -->
-  <div class="bg-white shadow overflow-hidden">
-    <img src="src/images/restaurant.jpg" alt="음식" class="w-full h-36 object-cover">
-    <div class="p-4">
-      <h3 class="font-bold text-sm">Gustavo's Venezuelan Din...</h3>
-      <p class="text-gray-600 text-sm">베네수엘라, 남미 요리</p>
-      <div class="flex items-center mt-2">
+<article class="res-card">
+ <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
+    <div class="res-card-body">
+      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
+      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
+      <div class="res-card-rating">
         <span class="text-green-600">●●●●</span>
-        <span class="ml-2 text-sm text-gray-500">12</span>
+        <span class="res-card-review-count">12</span>
       </div>
-      <p class="text-xs text-gray-400 mt-2">제공: EatWith</p>
+      <p class="res-card-provider">제공: EatWith</p>
     </div>
-  </div>
-    <div class="bg-white shadow overflow-hidden">
-    <img src="src/images/restaurant.jpg" alt="음식" class="w-full h-36 object-cover">
-    <div class="p-4">
-      <h3 class="font-bold text-sm">Gustavo's Venezuelan Din...</h3>
-      <p class="text-gray-600 text-sm">베네수엘라, 남미 요리</p>
-      <div class="flex items-center mt-2">
+ </article>
+ <article class="res-card">
+ <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
+    <div class="res-card-body">
+      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
+      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
+      <div class="res-card-rating">
         <span class="text-green-600">●●●●</span>
-        <span class="ml-2 text-sm text-gray-500">12</span>
+        <span class="res-card-review-count">12</span>
       </div>
-      <p class="text-xs text-gray-400 mt-2">제공: EatWith</p>
+      <p class="res-card-provider">제공: EatWith</p>
     </div>
-  </div>
-   <div class="bg-white  shadow overflow-hidden">
-    <img src="src/images/restaurant.jpg" alt="음식" class="w-full h-36 object-cover">
-    <div class="p-4">
-      <h3 class="font-bold text-sm">Gustavo's Venezuelan Din...</h3>
-      <p class="text-gray-600 text-sm">베네수엘라, 남미 요리</p>
-      <div class="flex items-center mt-2">
+ </article>
+<article class="res-card">
+ <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
+    <div class="res-card-body">
+      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
+      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
+      <div class="res-card-rating">
         <span class="text-green-600">●●●●</span>
-        <span class="ml-2 text-sm text-gray-500">12</span>
+        <span class="res-card-review-count">12</span>
       </div>
-      <p class="text-xs text-gray-400 mt-2">제공: EatWith</p>
+      <p class="res-card-provider">제공: EatWith</p>
     </div>
-  </div>
+ </article>
       </div>
     </section>
 
     
 
 <!-- 뉴욕 맛집 Best 5 : 세로 1열 리스트 -->
-<section class="site-container">
-  <h2 class="text-2xl font-bold mb-4">뉴욕 맛집 Best 5</h2>
-
-  <!-- 리스트 래퍼 -->
-  <div class="divide-y">
-
+<section class="order-3 lg:order-3 space-y-6">
+  <div class="resto-section">
+          <h2 class="resto-section-title">뉴욕 맛집 Best 5</h2>
+          <a href="#" class="resto-section-link">더 보기</a>
+  </div>
     <!-- ITEM 1 -->
-    <article class="py-6">
-      <div class="flex gap-5">
-        <!-- 썸네일 -->
-        <a href="#" class="shrink-0 block w-[320px] h-[200px] rounded overflow-hidden">
-          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village"
-               class="w-full h-full object-cover">
+    <article>
+ <div class="best-item">
+      <div class="best-row">        <!-- 썸네일 -->
+        <a href="#" class="best-thumb">
+          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
         </a>
 
         <!-- 본문 -->
-        <div class="min-w-0 flex-1 space-y-2">
+        <div class="best-body">
           <!-- 타이틀행 -->
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-bold">1. Boucherie West Village</h3>
-            <button class="text-gray-400 hover:text-gray-600">
-              <i class="fa-regular fa-heart text-xl"></i>
-            </button>
+          <div class="best-head">
+            <h3 class="best-title">1. Boucherie West Village</h3>
+            
           </div>
 
           <!-- 평점/리뷰/상태 -->
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-600">
-            <div class="flex items-center gap-1 text-green-600">
+          <div class="best-meta">
+            <div class="best-review">
               <span>●</span><span>●</span><span>●</span><span>●</span>
             </div>
             <span class="text-gray-500">1,269건의 리뷰</span>
-            <span class="text-gray-400">·</span>
+            <span class="best-dot">·</span>
             <span>영업 중</span>
-            <span class="text-gray-400">·</span>
+            <span class="best-dot">·</span>
             <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
-            <span class="text-gray-400">·</span>
+            <span class="best-dot">·</span>
             <span>$$ - $$$</span>
           </div>
 
           <!-- 한줄 코멘트 -->
-          <div class="text-sm text-gray-700 space-y-1">
+          <div class="best-notes">
             <p>“맛있네요”</p>
             <p>“굿!”</p>
           </div>
 
           <!-- 버튼 -->
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a href="#" class="inline-flex items-center rounded-full bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 text-sm font-semibold">예약하기</a>
-            <a href="#" class="inline-flex items-center rounded-full bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 text-sm font-semibold">온라인으로 주문하기</a>
+          <div class="best-cta">
+            <a href="#" class="btn-pill">예약하기</a>
+            <a href="#" class="btn-pill">온라인으로 주문하기</a>
           </div>
         </div>
       </div>
+      </div>
     </article>
-
     <!-- ITEM 2 -->
-    <article class="py-6">
-      <div class="flex gap-5">
-        <a href="#" class="shrink-0 block w-[320px] h-[200px] rounded overflow-hidden">
-          <img src="./src/images/beach.jpg" alt="Olio e Più" class="w-full h-full object-cover">
+     <article>
+ <div class="best-item">
+      <div class="best-row">        <!-- 썸네일 -->
+        <a href="#" class="best-thumb">
+          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
         </a>
-        <div class="min-w-0 flex-1 space-y-2">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-bold">2. Olio e Più</h3>
-            <button class="text-gray-400 hover:text-gray-600"><i class="fa-regular fa-heart text-xl"></i></button>
+
+        <!-- 본문 -->
+        <div class="best-body">
+          <!-- 타이틀행 -->
+          <div class="best-head">
+            <h3 class="best-title">2. Boucherie West Village</h3>
+            
           </div>
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-600">
-            <div class="flex items-center gap-1 text-green-600"><span>●</span><span>●</span><span>●</span><span>●</span></div>
-            <span class="text-gray-500">2,690건의 리뷰</span><span class="text-gray-400">·</span>
-            <span>영업 중</span><span class="text-gray-400">·</span>
-            <span>이탈리아 요리, 피자</span><span class="text-gray-400">·</span>
+
+          <!-- 평점/리뷰/상태 -->
+          <div class="best-meta">
+            <div class="best-review">
+              <span>●</span><span>●</span><span>●</span><span>●</span>
+            </div>
+            <span class="text-gray-500">1,269건의 리뷰</span>
+            <span class="best-dot">·</span>
+            <span>영업 중</span>
+            <span class="best-dot">·</span>
+            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
+            <span class="best-dot">·</span>
             <span>$$ - $$$</span>
           </div>
-          <div class="text-sm text-gray-700 space-y-1">
-            <p>“분위기도 좋고 맛도 좋아요”</p>
-            <p>“굿! 매우 추천!”</p>
+
+          <!-- 한줄 코멘트 -->
+          <div class="best-notes">
+            <p>“맛있네요”</p>
+            <p>“굿!”</p>
           </div>
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a href="#" class="inline-flex items-center rounded-full bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 text-sm font-semibold">예약하기</a>
-            <a href="#" class="inline-flex items-center rounded-full bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 text-sm font-semibold">온라인으로 주문하기</a>
+
+          <!-- 버튼 -->
+          <div class="best-cta">
+            <a href="#" class="btn-pill">예약하기</a>
+            <a href="#" class="btn-pill">온라인으로 주문하기</a>
           </div>
         </div>
       </div>
+      </div>
     </article>
 
-  
-
+   
     <!-- ITEM 3 -->
-    <article class="py-6">
-      <div class="flex gap-5">
-        <a href="#" class="shrink-0 block w-[320px] h-[200px] rounded overflow-hidden">
-          <img src="./src/images/s-001.jpg" alt="Bleecker Street Pizza" class="w-full h-full object-cover">
+      <article>
+ <div class="best-item">
+      <div class="best-row">        <!-- 썸네일 -->
+        <a href="#" class="best-thumb">
+          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
         </a>
-        <div class="min-w-0 flex-1 space-y-2">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-bold">3. Bleecker Street Pizza</h3>
-            <button class="text-gray-400 hover:text-gray-600"><i class="fa-regular fa-heart text-xl"></i></button>
+
+        <!-- 본문 -->
+        <div class="best-body">
+          <!-- 타이틀행 -->
+          <div class="best-head">
+            <h3 class="best-title">3. Boucherie West Village</h3>
+            
           </div>
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-600">
-            <div class="flex items-center gap-1 text-green-600"><span>●</span><span>●</span><span>●</span><span>●</span></div>
-            <span class="text-gray-500">1,607건의 리뷰</span><span class="text-gray-400">·</span>
-            <span>영업 중</span><span class="text-gray-400">·</span>
-            <span>이탈리아 요리, 피자</span><span class="text-gray-400">·</span>
-            <span>$ - $$</span>
+
+          <!-- 평점/리뷰/상태 -->
+          <div class="best-meta">
+            <div class="best-review">
+              <span>●</span><span>●</span><span>●</span><span>●</span>
+            </div>
+            <span class="text-gray-500">1,269건의 리뷰</span>
+            <span class="best-dot">·</span>
+            <span>영업 중</span>
+            <span class="best-dot">·</span>
+            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
+            <span class="best-dot">·</span>
+            <span>$$ - $$$</span>
           </div>
-          <div class="text-sm text-gray-700 space-y-1">
-            <p>“엄청 큰 피자”</p>
+
+          <!-- 한줄 코멘트 -->
+          <div class="best-notes">
+            <p>“맛있네요”</p>
+            <p>“굿!”</p>
           </div>
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a href="#" class="inline-flex items-center rounded-full bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 text-sm font-semibold">온라인으로 주문하기</a>
+
+          <!-- 버튼 -->
+          <div class="best-cta">
+            <a href="#" class="btn-pill">예약하기</a>
+            <a href="#" class="btn-pill">온라인으로 주문하기</a>
           </div>
         </div>
+      </div>
       </div>
     </article>
     <!-- ITEM 4 -->
-    <article class="py-6">
-      <div class="flex gap-5">
-        <a href="#" class="shrink-0 block w-[320px] h-[200px] rounded overflow-hidden">
-          <img src="./src/images/s-001.jpg" alt="Bleecker Street Pizza" class="w-full h-full object-cover">
+    <article>
+ <div class="best-item">
+      <div class="best-row">        <!-- 썸네일 -->
+        <a href="#" class="best-thumb">
+          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
         </a>
-        <div class="min-w-0 flex-1 space-y-2">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-bold">4. Bleecker Street Pizza</h3>
-            <button class="text-gray-400 hover:text-gray-600"><i class="fa-regular fa-heart text-xl"></i></button>
+
+        <!-- 본문 -->
+        <div class="best-body">
+          <!-- 타이틀행 -->
+          <div class="best-head">
+            <h3 class="best-title">4. Boucherie West Village</h3>
+            
           </div>
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-600">
-            <div class="flex items-center gap-1 text-green-600"><span>●</span><span>●</span><span>●</span><span>●</span></div>
-            <span class="text-gray-500">1,607건의 리뷰</span><span class="text-gray-400">·</span>
-            <span>영업 중</span><span class="text-gray-400">·</span>
-            <span>이탈리아 요리, 피자</span><span class="text-gray-400">·</span>
-            <span>$ - $$</span>
+
+          <!-- 평점/리뷰/상태 -->
+          <div class="best-meta">
+            <div class="best-review">
+              <span>●</span><span>●</span><span>●</span><span>●</span>
+            </div>
+            <span class="text-gray-500">1,269건의 리뷰</span>
+            <span class="best-dot">·</span>
+            <span>영업 중</span>
+            <span class="best-dot">·</span>
+            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
+            <span class="best-dot">·</span>
+            <span>$$ - $$$</span>
           </div>
-          <div class="text-sm text-gray-700 space-y-1">
-            <p>“엄청 큰 피자”</p>
+
+          <!-- 한줄 코멘트 -->
+          <div class="best-notes">
+            <p>“맛있네요”</p>
+            <p>“굿!”</p>
           </div>
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a href="#" class="inline-flex items-center rounded-full bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 text-sm font-semibold">온라인으로 주문하기</a>
+
+          <!-- 버튼 -->
+          <div class="best-cta">
+            <a href="#" class="btn-pill">예약하기</a>
+            <a href="#" class="btn-pill">온라인으로 주문하기</a>
           </div>
         </div>
+      </div>
       </div>
     </article>
    <!-- ITEM 5 -->
-     <article class="py-6">
-      <div class="flex gap-5">
-        <a href="#" class="shrink-0 block w-[320px] h-[200px] rounded overflow-hidden">
-          <img src="./src/images/s-001.jpg" alt="Bleecker Street Pizza" class="w-full h-full object-cover">
+     <article>
+ <div class="best-item">
+      <div class="best-row">        <!-- 썸네일 -->
+        <a href="#" class="best-thumb">
+          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
         </a>
-        <div class="min-w-0 flex-1 space-y-2">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-bold">5. Bleecker Street Pizza</h3>
-            <button class="text-gray-400 hover:text-gray-600"><i class="fa-regular fa-heart text-xl"></i></button>
+
+        <!-- 본문 -->
+        <div class="best-body">
+          <!-- 타이틀행 -->
+          <div class="best-head">
+            <h3 class="best-title">5. Boucherie West Village</h3>
+            
           </div>
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-600">
-            <div class="flex items-center gap-1 text-green-600"><span>●</span><span>●</span><span>●</span><span>●</span></div>
-            <span class="text-gray-500">1,607건의 리뷰</span><span class="text-gray-400">·</span>
-            <span>영업 중</span><span class="text-gray-400">·</span>
-            <span>이탈리아 요리, 피자</span><span class="text-gray-400">·</span>
-            <span>$ - $$</span>
+
+          <!-- 평점/리뷰/상태 -->
+          <div class="best-meta">
+            <div class="best-review">
+              <span>●</span><span>●</span><span>●</span><span>●</span>
+            </div>
+            <span class="text-gray-500">1,269건의 리뷰</span>
+            <span class="best-dot">·</span>
+            <span>영업 중</span>
+            <span class="best-dot">·</span>
+            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
+            <span class="best-dot">·</span>
+            <span>$$ - $$$</span>
           </div>
-          <div class="text-sm text-gray-700 space-y-1">
-            <p>“엄청 큰 피자”</p>
+
+          <!-- 한줄 코멘트 -->
+          <div class="best-notes">
+            <p>“맛있네요”</p>
+            <p>“굿!”</p>
           </div>
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a href="#" class="inline-flex items-center rounded-full bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 text-sm font-semibold">온라인으로 주문하기</a>
+
+          <!-- 버튼 -->
+          <div class="best-cta">
+            <a href="#" class="btn-pill">예약하기</a>
+            <a href="#" class="btn-pill">온라인으로 주문하기</a>
           </div>
         </div>
       </div>
+      </div>
     </article>
-  </div>
+
 </section>
 
 
@@ -432,13 +515,13 @@
     </main>
 
     <!-- ▶ RIGHT SIDEBAR (고정 폭 + sticky) -->
-    <aside class="min-w-0 order-3 lg:order-3">
+    <aside class="right-rail">
      
 
 
       
         <!-- KP TV   -->
-    <div class="mt-12">
+    <div class="mt-[-10px]">
       <h2 class="kp-title">KP TV</h2>      
        <iframe width="100%" height="260" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -569,6 +652,34 @@
     </div>
 
   
+    <!-- 차량 3 -->
+    <div class="rentcar-card">
+      <img src="src/images/s-001.jpg" alt="Nissan Sentra" class="rentcar-img" />
+      <p class="rentcar-brand">TURO</p>
+      <p class="rentcar-model">Nissan Sentra</p>
+      <p class="rentcar-type">or similar Small</p>
+      <div class="rentcar-info">
+        <span>👤 4</span><span>💼 2</span><span>🚪 4-5</span>
+      </div>
+      <div class="rentcar-footer">
+        <span class="rentcar-price">$35 <span class="rentcar-unit">/day</span></span>
+        <button class="rentcar-btn">View Deal</button>
+      </div>
+    </div>
+    <!-- 차량 4 -->
+    <div class="rentcar-card">
+      <img src="src/images/s-001.jpg" alt="Nissan Sentra" class="rentcar-img" />
+      <p class="rentcar-brand">TURO</p>
+      <p class="rentcar-model">Nissan Sentra</p>
+      <p class="rentcar-type">or similar Small</p>
+      <div class="rentcar-info">
+        <span>👤 4</span><span>💼 2</span><span>🚪 4-5</span>
+      </div>
+      <div class="rentcar-footer">
+        <span class="rentcar-price">$35 <span class="rentcar-unit">/day</span></span>
+        <button class="rentcar-btn">View Deal</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -581,11 +692,33 @@
 </div>
 
 
-<!-- 💡 점선: footer-inner 밖에서 전체 너비로! -->
+  <!-- 아래 회사정보 -->
+  <footer class="footer">
+  <div class="res-site-container">
+    
+    <!-- 좌측 -->
+    <div class="footer-left">
+      <h1 class="footer-logo">KOREAPORTAL</h1>
+    </div>
+
+    <!-- 우측 -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="#">업소록</a>
+        <a href="#">마켓플레이스</a>
+        <a href="#">K-Wave팬클럽</a>
+        <a href="#">오픈보드</a>
+        <a href="#">교육</a>
+        <a href="#">지역정보</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 💡 점선: footer-inner 밖에서 전체 너비로! -->
   <div class="footer-divider"></div>
 
   <!-- 아래 회사정보 -->
-  <footer class="site-container">
+  <div class="res-site-container">
     <div class="footer-left">
       <div class="footer-links">
         <a href="#">회사소개</a> |
