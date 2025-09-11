@@ -81,13 +81,13 @@
           <a href="/news" class="main-menu__link">여행</a>
         </li>
         <li class="main-menu__item">
-          <a href="/community" class="main-menu__link main-menu__link--active" aria-current="page">맛집</a>
+          <a href="/community" class="main-menu__link">맛집</a>
         </li>
         <li class="main-menu__item">
           <a href="/events" class="main-menu__link">Korea Friday</a>
         </li>
         <li class="main-menu__item">
-          <a href="/travel" class="main-menu__link">생활정보</a>
+          <a href="/travel" class="main-menu__link main-menu__link--active" aria-current="page">생활정보</a>
         </li>
          <li class="main-menu__item">
           <a href="/travel" class="main-menu__link main-menu__link--w">글쓰기</a>
@@ -173,341 +173,175 @@
 
     <!-- ■ MAIN CONTENT -->
     <main class="main-rail">
-       <!-- 브런치 맛집 -->
-     <section>
-      <div class="sub-section">
-          <h2 class="sub-section-title">브런치 맛집</h2>
+      <!-- 이것 저것 공유 -->
+<section>
+
+<div class="sub-section">
+          <h2 class="sub-section-title">이것 저것 공유</h2>
           <a href="#" class="sub-section-link">더 보기</a>
   </div>
-
-      <div class="res-card-grid">
-        
-  <!-- 카드 반복 -->
-<article class="res-card">
- <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
-    <div class="res-card-body">
-      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
-      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
-      <div class="res-card-rating">
-        <span class="text-green-600">●●●●</span>
-        <span class="res-card-review-count">12</span>
-      </div>
-      <p class="res-card-provider">제공: EatWith</p>
-    </div>
- </article>
- <article class="res-card">
- <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
-    <div class="res-card-body">
-      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
-      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
-      <div class="res-card-rating">
-        <span class="text-green-600">●●●●</span>
-        <span class="res-card-review-count">12</span>
-      </div>
-      <p class="res-card-provider">제공: EatWith</p>
-    </div>
- </article>
-<article class="res-card">
- <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
-    <div class="res-card-body">
-      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
-      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
-      <div class="res-card-rating">
-        <span class="text-green-600">●●●●</span>
-        <span class="res-card-review-count">12</span>
-      </div>
-      <p class="res-card-provider">제공: EatWith</p>
-    </div>
- </article>
-      </div>
-    </section>
-
-    <!-- 로컬 맛집 -->
-     <section>
-    <div class="sub-section">
-          <h2 class="sub-section-title">로컬 맛집</h2>
-          <a href="#" class="sub-section-link">더 보기</a>
-  </div>
-
-
-      <div class="res-card-grid">
-        
-  <!-- 카드 반복 -->
-<article class="res-card">
- <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
-    <div class="res-card-body">
-      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
-      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
-      <div class="res-card-rating">
-        <span class="text-green-600">●●●●</span>
-        <span class="res-card-review-count">12</span>
-      </div>
-      <p class="res-card-provider">제공: EatWith</p>
-    </div>
- </article>
- <article class="res-card">
- <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
-    <div class="res-card-body">
-      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
-      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
-      <div class="res-card-rating">
-        <span class="text-green-600">●●●●</span>
-        <span class="res-card-review-count">12</span>
-      </div>
-      <p class="res-card-provider">제공: EatWith</p>
-    </div>
- </article>
-<article class="res-card">
- <img src="src/images/restaurant.jpg" alt="음식" class="res-card-img">
-    <div class="res-card-body">
-      <h3 class="res-card-title">Gustavo's Venezuelan Din...</h3>
-      <p class="res-card-subtitle">베네수엘라, 남미 요리</p>
-      <div class="res-card-rating">
-        <span class="text-green-600">●●●●</span>
-        <span class="res-card-review-count">12</span>
-      </div>
-      <p class="res-card-provider">제공: EatWith</p>
-    </div>
- </article>
-      </div>
-    </section>
-
-    
-
-<!-- 뉴욕 맛집 Best 5 : 세로 1열 리스트 -->
-<section class="best-grid">
-  <div class="sub-section">
-          <h2 class="sub-section-title">뉴욕 맛집 Best 5</h2>
-          <a href="#" class="sub-section-link">더 보기</a>
-  </div>
-    <!-- ITEM 1 -->
+  <!-- 2열 카드 (모바일도 2열) -->
+  <div class="info-share-grid">
+    <!-- 카드 1 -->
     <article>
- <div class="best-item">
-      <div class="best-row">        <!-- 썸네일 -->
-        <a href="#" class="best-thumb">
-          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
-        </a>
-
-        <!-- 본문 -->
-        <div class="best-body">
-          <!-- 타이틀행 -->
-          <div class="best-head">
-            <h3 class="best-title">1. Boucherie West Village</h3>
-            
-          </div>
-
-          <!-- 평점/리뷰/상태 -->
-          <div class="best-meta">
-            <div class="best-review">
-              <span>●</span><span>●</span><span>●</span><span>●</span>
-            </div>
-            <span class="text-gray-500">1,269건의 리뷰</span>
-            <span class="best-dot">·</span>
-            <span>영업 중</span>
-            <span class="best-dot">·</span>
-            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
-            <span class="best-dot">·</span>
-            <span>$$ - $$$</span>
-          </div>
-
-          <!-- 한줄 코멘트 -->
-          <div class="best-notes">
-            <p>“맛있네요”</p>
-            <p>“굿!”</p>
-          </div>
-
-          <!-- 버튼 -->
-          <div class="best-cta">
-            <a href="#" class="btn-pill">예약하기</a>
-            <a href="#" class="btn-pill">온라인으로 주문하기</a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </article>
-    <!-- ITEM 2 -->
-     <article>
- <div class="best-item">
-      <div class="best-row">        <!-- 썸네일 -->
-        <a href="#" class="best-thumb">
-          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
-        </a>
-
-        <!-- 본문 -->
-        <div class="best-body">
-          <!-- 타이틀행 -->
-          <div class="best-head">
-            <h3 class="best-title">2. Boucherie West Village</h3>
-            
-          </div>
-
-          <!-- 평점/리뷰/상태 -->
-          <div class="best-meta">
-            <div class="best-review">
-              <span>●</span><span>●</span><span>●</span><span>●</span>
-            </div>
-            <span class="text-gray-500">1,269건의 리뷰</span>
-            <span class="best-dot">·</span>
-            <span>영업 중</span>
-            <span class="best-dot">·</span>
-            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
-            <span class="best-dot">·</span>
-            <span>$$ - $$$</span>
-          </div>
-
-          <!-- 한줄 코멘트 -->
-          <div class="best-notes">
-            <p>“맛있네요”</p>
-            <p>“굿!”</p>
-          </div>
-
-          <!-- 버튼 -->
-          <div class="best-cta">
-            <a href="#" class="btn-pill">예약하기</a>
-            <a href="#" class="btn-pill">온라인으로 주문하기</a>
-          </div>
-        </div>
-      </div>
-      </div>
+      <a href="#" class="info-share-thumb">
+        <img src="src/images/s-001.jpg" alt="" class="info-share-img">
+      </a>
+      <h3 class="info-share-title">알게 모르게 가난해지는 습관 10가지</h3>
+      <p class="info-share-source">상상스퀘어</p>
     </article>
 
-   
-    <!-- ITEM 3 -->
-      <article>
- <div class="best-item">
-      <div class="best-row">        <!-- 썸네일 -->
-        <a href="#" class="best-thumb">
-          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
-        </a>
-
-        <!-- 본문 -->
-        <div class="best-body">
-          <!-- 타이틀행 -->
-          <div class="best-head">
-            <h3 class="best-title">3. Boucherie West Village</h3>
-            
-          </div>
-
-          <!-- 평점/리뷰/상태 -->
-          <div class="best-meta">
-            <div class="best-review">
-              <span>●</span><span>●</span><span>●</span><span>●</span>
-            </div>
-            <span class="text-gray-500">1,269건의 리뷰</span>
-            <span class="best-dot">·</span>
-            <span>영업 중</span>
-            <span class="best-dot">·</span>
-            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
-            <span class="best-dot">·</span>
-            <span>$$ - $$$</span>
-          </div>
-
-          <!-- 한줄 코멘트 -->
-          <div class="best-notes">
-            <p>“맛있네요”</p>
-            <p>“굿!”</p>
-          </div>
-
-          <!-- 버튼 -->
-          <div class="best-cta">
-            <a href="#" class="btn-pill">예약하기</a>
-            <a href="#" class="btn-pill">온라인으로 주문하기</a>
-          </div>
-        </div>
-      </div>
-      </div>
+    <!-- 카드 2 -->
+   <article>
+      <a href="#" class="info-share-thumb">
+        <img src="src/images/s-001.jpg" alt="" class="info-share-img">
+      </a>
+      <h3 class="info-share-title">알게 모르게 가난해지는 습관 10가지</h3>
+      <p class="info-share-source">상상스퀘어</p>
     </article>
-    <!-- ITEM 4 -->
+
+
+    <!-- 카드 3 -->
+   <article>
+      <a href="#" class="info-share-thumb">
+        <img src="src/images/s-001.jpg" alt="" class="info-share-img">
+      </a>
+      <h3 class="info-share-title">알게 모르게 가난해지는 습관 10가지</h3>
+      <p class="info-share-source">상상스퀘어</p>
+    </article>
+
+
+    <!-- 카드 4 -->
     <article>
- <div class="best-item">
-      <div class="best-row">        <!-- 썸네일 -->
-        <a href="#" class="best-thumb">
-          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
-        </a>
-
-        <!-- 본문 -->
-        <div class="best-body">
-          <!-- 타이틀행 -->
-          <div class="best-head">
-            <h3 class="best-title">4. Boucherie West Village</h3>
-            
-          </div>
-
-          <!-- 평점/리뷰/상태 -->
-          <div class="best-meta">
-            <div class="best-review">
-              <span>●</span><span>●</span><span>●</span><span>●</span>
-            </div>
-            <span class="text-gray-500">1,269건의 리뷰</span>
-            <span class="best-dot">·</span>
-            <span>영업 중</span>
-            <span class="best-dot">·</span>
-            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
-            <span class="best-dot">·</span>
-            <span>$$ - $$$</span>
-          </div>
-
-          <!-- 한줄 코멘트 -->
-          <div class="best-notes">
-            <p>“맛있네요”</p>
-            <p>“굿!”</p>
-          </div>
-
-          <!-- 버튼 -->
-          <div class="best-cta">
-            <a href="#" class="btn-pill">예약하기</a>
-            <a href="#" class="btn-pill">온라인으로 주문하기</a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </article>
-   <!-- ITEM 5 -->
-     <article>
- <div class="best-item">
-      <div class="best-row">        <!-- 썸네일 -->
-        <a href="#" class="best-thumb">
-          <img src="./src/images/restaurant.jpg" alt="Boucherie West Village">
-        </a>
-
-        <!-- 본문 -->
-        <div class="best-body">
-          <!-- 타이틀행 -->
-          <div class="best-head">
-            <h3 class="best-title">5. Boucherie West Village</h3>
-            
-          </div>
-
-          <!-- 평점/리뷰/상태 -->
-          <div class="best-meta">
-            <div class="best-review">
-              <span>●</span><span>●</span><span>●</span><span>●</span>
-            </div>
-            <span class="text-gray-500">1,269건의 리뷰</span>
-            <span class="best-dot">·</span>
-            <span>영업 중</span>
-            <span class="best-dot">·</span>
-            <span class="text-gray-600">프랑스 요리, 스테이크하우스</span>
-            <span class="best-dot">·</span>
-            <span>$$ - $$$</span>
-          </div>
-
-          <!-- 한줄 코멘트 -->
-          <div class="best-notes">
-            <p>“맛있네요”</p>
-            <p>“굿!”</p>
-          </div>
-
-          <!-- 버튼 -->
-          <div class="best-cta">
-            <a href="#" class="btn-pill">예약하기</a>
-            <a href="#" class="btn-pill">온라인으로 주문하기</a>
-          </div>
-        </div>
-      </div>
-      </div>
+      <a href="#" class="info-share-thumb">
+        <img src="src/images/s-001.jpg" alt="" class="info-share-img">
+      </a>
+      <h3 class="info-share-title">알게 모르게 가난해지는 습관 10가지</h3>
+      <p class="info-share-source">상상스퀘어</p>
     </article>
 
+  </div>
+</section>
+
+<!-- 똑똑한 서비스 -->
+<section class="smart-service-section">
+  
+<div class="sub-section">
+          <h2 class="sub-section-title">똑똑한 서비스</h2>
+          <a href="#" class="sub-section-link">더 보기</a>
+  </div>
+  <!-- 3열 미니 카드 -->
+  <div class="smart-service-grid">
+    <article class="smart-service-card">
+      <a href="#" class="smart-service-thumb">
+        <img src="src/images/s-001.jpg" alt="" class="smart-service-img">
+      </a>
+      <h3 class="smart-service-name">미니멀 화이트 인테리어</h3>
+      <p class="smart-service-source">엘피스</p>
+    </article>
+
+     <article class="smart-service-card">
+      <a href="#" class="smart-service-thumb">
+        <img src="src/images/s-001.jpg" alt="" class="smart-service-img">
+      </a>
+      <h3 class="smart-service-name">미니멀 화이트 인테리어</h3>
+      <p class="smart-service-source">엘피스</p>
+    </article>
+
+     <article class="smart-service-card">
+      <a href="#" class="smart-service-thumb">
+        <img src="src/images/s-001.jpg" alt="" class="smart-service-img">
+      </a>
+      <h3 class="smart-service-name">미니멀 화이트 인테리어</h3>
+      <p class="smart-service-source">엘피스</p>
+    </article>
+  </div>
+</section>
+
+<!-- 생활꿀팁 -->
+<section class="mt-10">
+
+<div class="sub-section">
+          <h2 class="sub-section-title">생활꿀팁</h2>
+          <a href="#" class="sub-section-link">더 보기</a>
+  </div>
+  <ul class="divide-y border-b">
+    <li class="py-3">오늘의 생활팁 집 안 습기 잡는 꿀팁입니다.</li>
+    <li class="py-3">오늘의 생활팁 집 안 습기 잡는 꿀팁입니다.</li>
+    <li class="py-3">오늘의 생활팁 집 안 습기 잡는 꿀팁입니다.</li>
+    <li class="py-3">오늘의 생활팁 집 안 습기 잡는 꿀팁입니다.</li>
+    <li class="py-3">오늘의 생활팁 집 안 습기 잡는 꿀팁입니다.</li>
+    <li class="py-3">오늘의 생활팁 집 안 습기 잡는 꿀팁입니다.</li>
+  </ul>
+</section>
+
+<!-- 많이 본 글 -->
+<section class="popular-section">
+<div class="sub-section">
+          <h2 class="sub-section-title">많이 본 글</h2>
+          <a href="#" class="sub-section-link">더 보기</a>
+  </div>
+  <ol class="popular-list">
+    <!-- 아이템 -->
+    <li>
+      <a href="#" class="popular-item">
+        <span class="popular-item">
+          <span class="popular-rank">1</span>
+          <span class="popular-text">미국에서 살기 좋은 주 어디라고 생각하시나요?</span>
+        </span>
+        <span class="popular-category">이것저것 공유</span>
+      </a>
+    </li>
+
+     <li>
+      <a href="#" class="popular-item">
+        <span class="popular-item">
+          <span class="popular-rank">1</span>
+          <span class="popular-text">미국에서 살기 좋은 주 어디라고 생각하시나요?</span>
+        </span>
+        <span class="popular-category">이것저것 공유</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#" class="popular-item">
+        <span class="popular-item">
+          <span class="popular-rank">2</span>
+          <span class="popular-text">미국에서 살기 좋은 주 어디라고 생각하시나요?</span>
+        </span>
+        <span class="popular-category">이것저것 공유</span>
+      </a>
+    </li>
+
+    <!-- 4~6 동일 패턴 -->
+    <li>
+      <a href="#" class="popular-item">
+        <span class="popular-item">
+          <span class="popular-rank">3</span>
+          <span class="popular-text">미국에서 살기 좋은 주 어디라고 생각하시나요?</span>
+        </span>
+        <span class="popular-category">이것저것 공유</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="popular-item">
+        <span class="popular-item">
+          <span class="popular-rank">4</span>
+          <span class="popular-text">미국에서 살기 좋은 주 어디라고 생각하시나요?</span>
+        </span>
+        <span class="popular-category">이것저것 공유</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="popular-item">
+        <span class="popular-item">
+          <span class="popular-rank">5</span>
+          <span class="popular-text">미국에서 살기 좋은 주 어디라고 생각하시나요?</span>
+        </span>
+        <span class="popular-category">이것저것 공유</span>
+      </a>
+    </li>
+  </ol>
 </section>
 
 
