@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="뉴욕 한인 여행자들을 위한 최고의 가이드! 맛집, 호텔, 관광지 정보 제공." />
+  <meta property="og:image" content="./src/images/social-preview.jpg" />
+  <title>KPGUIDE New York 뉴욕여행</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+ <link rel="stylesheet" href="./dist/output.css" />
+
+</head>
+<body>
+  <div class="b-full-bar">
+    <div class="site-container">
+
+  <!-- 모바일에만 보이는 버튼 -->
+<div class="city-label sm:hidden block">
+  <button onclick="document.getElementById('city-menu').classList.toggle('hidden')">
+   도시 선택 <span class="search-icon"><i class="fa-solid fa-bars"></i></span>
+  </button>
+</div>
+
+<!-- 도시 메뉴 리스트 -->
+<ul id="city-menu" class="city-nav sm:flex hidden">
+  <li><a href="#">LA</a></li>
+  <li><a href="#" class="active">NY/NJ</a></li>
+  <li><a href="#">SF</a></li>
+  <li>Seattle</li>
+  <li>Chicago</li>
+  <li>Dallas</li>
+  <li>D.C./Virginia</li>
+  <li>Atlanta</li>
+  <li>Toronto</li>
+  <li>Vancouver</li>
+  <li>Australia</li>
+</ul>
+
+      
+    </div>
+  </div>
+
+ 
+
+
+  <div class="site-container">
+    <header class="site-header">
+      <a class="logo" href="/"><img src="./src/images/logo.png" alt="KPGUIDE Logo" class="logo-img" /></a>
+   <!--  <div class="search-item">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="검색어 입력" />
+          <span class="search-icon"><i class="fas fa-search"></i></span>
+        </div> 
+
+      </div>-->
+ <!-- SearchBar  -->
+<form class="header-search">
+  <div class="search-bar">
+  <input type="text" name="query"  placeholder="검색어를 입력하세요"  class="search-bar__input" />
+  <button type="submit" class="search-bar__button">
+ 
+    <svg  xmlns="http://www.w3.org/2000/svg"   class="search-bar__icon"  fill="none"  viewBox="0 0 24 24" stroke="currentColor"
+      stroke-width="2" >
+      <path stroke-linecap="round" stroke-linejoin="round"  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 7.5 7.5a7.5 7.5 0 0 0 9.15 9.15z"  />
+    </svg>
+  </button>
+  </div>
+</form>
+      <div class="login-button">
+        <a href="#" class="auth-button">회원가입</a>
+        <a href="#" class="auth-button">로그인</a>
+      </div>
+    </header>
+ <div class="main-menu">
+    <nav aria-label="Primary">
+      <ul class="main-menu__list">
+        <li class="main-menu__item">
+          <a href="/" class="main-menu__link">홈</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="/news" class="main-menu__link main-menu__link--active" aria-current="page">여행</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="/community" class="main-menu__link">맛집</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="/events" class="main-menu__link">Korea Friday</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="/travel" class="main-menu__link">생활정보</a>
+        </li>
+         <li class="main-menu__item">
+          <a href="/travel" class="main-menu__link main-menu__link--w">글쓰기</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+    <section>
+      <img src="./src/images/restaurant.jpg" alt="Main Visual" class="w-full" />
+    </section>
+<!-- ✅ Page Container -->
+<div class="res-site-container">
+  
+  <div class="res-site-grid">
+    <!-- ◀ LEFT NAV (xl 이상에서 보이기) -->
+    <aside class="left-rail">
+      <nav class="left-rail__nav">
+      <section>
+        <div class="left-rail__titlebar">
+            <h3 class="left-rail__title">여행</h3>
+            <i class="fa-solid fa-hotel text-orange-500 text-2xl"></i>
+       </div>
+
+
+          <ul class="kp-list">
+            <li class="kp-list__item"><span class="kp-bullet"></span>꼭 가볼만한 곳</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>저렴하고 괜찮은 호텔</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>인기 여행 코스</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>로컬들만 가는 곳</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>렌트카</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>여행 친구 찾기</li>
+          </ul>
+        </section>
+       
+      <section>
+            <div class="left-rail__titlebar">
+            <h3 class="left-rail__title">맛집</h3>
+            <i class="text-orange-500 fa-solid fa-mug-saucer"></i>
+            </div>
+
+          <ul class="kp-list">
+            <li class="kp-list__item"><span class="kp-bullet"></span>브런치 맛집</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>유명 커피숍</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>로컬들만 가는 맛집</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>한식 맛집</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>추천 맛집</li>
+          </ul>
+      </section>
+
+   <section>
+          <div class="left-rail__titlebar">
+            <h3 class="left-rail__title">Korea Friday</h3>
+            <i class="text-orange-500 fa-solid fa-ticket"></i>
+          </div>
+
+          <ul class="kp-list">
+            <li class="kp-list__item"><span class="kp-bullet"></span>콘서트 티켓/로컬 업소 쿠폰</li>
+          </ul>
+  </section>
+   <section>      
+          <div class="left-rail__titlebar">
+            <h3 class="left-rail__title">생활정보</h3>
+            <i class="text-orange-500 fa-solid  fa-tv"></i>
+          </div>
+
+
+          <ul class="kp-list">
+            <li class="kp-list__item"><span class="kp-bullet"></span>이것저것 공유</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>똑똑한 서비스</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>생활 꿀팁</li>
+            <li class="kp-list__item"><span class="kp-bullet"></span>랜선 집들이</li>
+          </ul>
+        </section> 
+
+      </nav>
+       <!-- 📺 ad box -->
+   <div class="ad-box">
+      <span class="text-gray-400 text-lg">Ad ops</span>
+    </div>
+    </aside>
+
+    <!-- ■ MAIN CONTENT -->
+    <main class="main-rail">
+<!-- ============ 뉴욕 여행 필수코스 ============ -->
+<section class="section-tour">
+
+  <div class="sub-section">
+          <h2 class="sub-section-title">뉴욕 여행 필수코스</h2>
+          <a href="#" class="sub-section-link">더 보기</a>
+  </div>
+
+  <!-- 카드 1 -->
+  <article class="tour-card">
+    <img src="src/images/beach.jpg" alt="" class="tour-card__thumb">
+    <div class="tour-card__body">
+      <h3 class="tour-card__title">
+        New York City 90-Minute Cruise: Lady Liberty, Bridges and Skyline
+      </h3>
+      <ul class="tour-card__meta">
+        <li class="tour-card__icon"><i class="fa-regular fa-circle-check"></i> Free Cancellation</li>
+        <li class="tour-card__icon"><i class="fa-regular fa-clock"></i> 1 hour 30 minutes</li>
+      </ul>
+      <p class="tour-card__price">from <span>$35</span></p>
+      <a href="#" class="tour-card__button">더보기</a>
+    </div>
+  </article>
+
+  <!-- 카드 2 -->
+  <article class="tour-card">
+    <img src="src/images/beach.jpg" alt="" class="tour-card__thumb">
+    <div class="tour-card__body">
+      <h3 class="tour-card__title">
+        NYC Edge Observation Deck at Hudson Yards Admission Ticket
+      </h3>
+      <ul class="tour-card__meta">
+        <li class="tour-card__icon"><i class="fa-regular fa-circle-check"></i> Free Cancellation</li>
+        <li class="tour-card__icon"><i class="fa-regular fa-clock"></i> 1 hour 30 minutes</li>
+      </ul>
+      <p class="tour-card__price">from <span>$39</span></p>
+      <a href="#" class="tour-card__button">더보기</a>
+    </div>
+  </article>
+</section>
+
+<!-- ============ 꼭 가볼만한 곳 ============ -->
+<section class="section-tour">
+<div class="sub-section">
+          <h2 class="sub-section-title">꼭 가볼만한 곳</h2>
+          <a href="#" class="sub-section-link">더 보기</a>
+  </div>
+  <div class="mustgo-grid">
+    <a href="#" class="mustgo-card">
+      <img src="src/images/beach.jpg" class="mustgo-card__img" alt="">
+      <span class="mustgo-card__label">툴룸, 멕시코</span>
+    </a>
+    <a href="#" class="mustgo-card">
+      <img src="src/images/beach.jpg" class="mustgo-card__img" alt="">
+      <span class="mustgo-card__label">보라보라, 폴리네시아</span>
+    </a>
+    <a href="#" class="mustgo-card">
+      <img src="src/images/beach.jpg" class="mustgo-card__img" alt="">
+      <span class="mustgo-card__label">테네리페, 스페인</span>
+    </a>
+    <a href="#" class="mustgo-card">
+      <img src="src/images/beach.jpg" class="mustgo-card__img" alt="">
+      <span class="mustgo-card__label">하와이</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 호텔 리뷰 (YouTube 리스트) ============ -->
+<section class="section-tour">
+<div class="sub-section">
+          <h2 class="sub-section-title">호텔 리뷰</h2>
+          <a href="#" class="sub-section-link">더 보기</a>
+  </div>
+  <ul class="space-y-4">
+    <li class="yt-row">
+      <a href="#" class="yt-thumb">
+        <img src="src/images/beach.jpg" class="yt-img" alt="">
+        <span class="yt-duration">09:37</span>
+      </a>
+      <div class="yt-body">
+        <h3 class="yt-title">미국 최고급 호텔 리뷰.. 미국 스케일 진짜 미쳤습니다;;</h3>
+        <p class="yt-meta">영알남YAN · <span>8개월 전</span> · Youtube</p>
+      </div>
+    </li>
+
+    <li class="yt-row">
+      <a href="#" class="yt-thumb">
+        <img src="src/images/beach.jpg" class="yt-img" alt="">
+        <span class="yt-duration">13:04</span>
+      </a>
+      <div class="yt-body">
+        <h3 class="yt-title">미국 라스베가스 호텔 대체 얼마나 좋은지 직접 다녀왔습니다🇺🇸</h3>
+        <p class="yt-meta">또 떠나는 남자 ddoddunam · <span>4개월 전</span> · Youtube</p>
+      </div>
+    </li>
+
+    <li class="yt-row">
+      <a href="#" class="yt-thumb">
+        <img src="src/images/beach.jpg" class="yt-img" alt="">
+        <span class="yt-duration">13:04</span>
+      </a>
+      <div class="yt-body">
+        <h3 class="yt-title">라스베가스 호텔 투어 총정리</h3>
+        <p class="yt-meta">또 떠나는 남자 ddoddunam · <span>4개월 전</span> · Youtube</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ============ 로컬들만 가는 곳 (노멀 그리드) ============ -->
+<section class="section-tour">
+<div class="sub-section">
+          <h2 class="sub-section-title">로컬들만 가는 곳</h2>
+          <a href="#" class="sub-section-link">더 보기</a>
+  </div>
+  <div class="local-grid">
+    <a href="#" class="local-card">
+      <img src="src/images/beach.jpg" alt="" class="local-card__img">
+      <div class="local-card__body">
+        <h3 class="local-card__title">올랜도</h3>
+        <p class="local-card__desc">월트 디즈니 월드 및 유니버설 스튜디오</p>
+        <div class="local-card__meta">
+          <span class="local-meta"><i class="fa-solid fa-plane-departure"></i>$100</span>
+          <span class="local-meta"><i class="fa-regular fa-clock"></i>2h</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="local-card">
+      <img src="src/images/beach.jpg" alt="" class="local-card__img">
+      <div class="local-card__body">
+        <h3 class="local-card__title">마이애미</h3>
+        <p class="local-card__desc">사우스 비치, 아르데코, 리틀 하바나</p>
+        <div class="local-card__meta">
+          <span class="local-meta"><i class="fa-solid fa-plane-departure"></i>$153</span>
+          <span class="local-meta"><i class="fa-regular fa-clock"></i>2h</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="local-card">
+      <img src="src/images/beach.jpg" alt="" class="local-card__img">
+      <div class="local-card__body">
+        <h3 class="local-card__title">월트 디즈니 월드 리조트</h3>
+        <p class="local-card__desc">유명한 테마파크, 숙소, 상점 등</p>
+        <div class="local-card__meta">
+          <span class="local-meta"><i class="fa-solid fa-plane-departure"></i>$100</span>
+          <span class="local-meta"><i class="fa-regular fa-clock"></i>2h</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="local-card">
+      <img src="src/images/beach.jpg" alt="" class="local-card__img">
+      <div class="local-card__body">
+        <h3 class="local-card__title">마이애미</h3>
+        <p class="local-card__desc">사우스 비치, 아르데코, 리틀 하바나</p>
+        <div class="local-card__meta">
+          <span class="local-meta"><i class="fa-solid fa-plane-departure"></i>$153</span>
+          <span class="local-meta"><i class="fa-regular fa-clock"></i>2h</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+ </main>
+ <!-- ▶ RIGHT SIDEBAR (고정 폭 + sticky) -->
+    <aside class="right-rail">
+   <!-- KP TV   -->
+    <div class="mt-[-10px]">
+      <h2 class="kp-title">KP TV</h2>      
+       <iframe width="100%" height="260" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- 📺 ad box -->
+  <div class="section-ad">
+    ad ops
+  </div>
+
+  <!-- 🎵 Korea Friday 박스 -->
+  <div class="section-korea-friday">
+    <div class="kf-section-title">
+      Korea Friday
+    </div>
+
+    <!-- 이벤트 카드 1 -->
+    <div class="kf-card-event border-b">
+      <div class="relative">
+        <img src="src/images/s-001.jpg" alt="Sub Urban" class="kf-card-image" />
+        <div class="kf-card-button">▶</div>
+      </div>
+      <div class="kf-event-card">
+        <div class="kf-event-date">📅 2025년 6월 25일 수요일</div>
+        <div class="kf-event-title">Sub Urban</div>
+        <div class="kf-event-info">Pearl Street Warehouse,<br/>Washington, DC</div>
+        <button class="kf-event-button">얼터너티브</button>
+      </div>
+    </div>
+
+    <!-- 이벤트 카드 2 -->
+    <div class="kf-card-event">
+      <div class="relative">
+        <img src="src/images/s-001.jpg" alt="BAEKHYUN" class="kf-card-image" />
+        <div class="kf-card-button">▶</div>
+      </div>
+      <div class="kf-event-card">
+        <div class="kf-event-date">📅 Wednesday, June 25, 2025</div>
+        <div class="kf-event-title">BAEKHYUN</div>
+        <div class="kf-event-info">Rosemont Theatre,<br/>Rosemont, IL</div>
+        <button class="kf-event-button">K-Pop</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- 인기 블로그 -->
+<section class="blog-list-widget">
+  <h2 class="blog-list-title">인기 블로그</h2>
+  <ul class="blog-list">
+    <!-- 블로그 항목 -->
+   <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">1.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+
+  <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">2.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+
+   <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">3.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+
+   <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">4.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+     <a href="#"> <li class="blog-list-item">
+      <span class="blog-list-rank">5.</span>
+      <img src="src/images/s-001.jpg" alt="Las Vegas" class="blog-list-img" />
+      <div>
+        <p class="blog-list-headline title-link">Las Vegas Vacations</p>
+        <p class="blog-list-desc">Cheap Las Vegas package deals</p>
+      </div>
+    </li></a>
+  </ul>
+</section>
+
+
+
+<section class="rentcar-widget">
+  <h2 class="rentcar-title">렌트카</h2>
+  <div class="rentcar-grid">
+    <!-- 차량 1 -->
+    <div class="rentcar-card">
+      <img src="src/images/s-001.jpg" alt="Chevrolet Spark" class="rentcar-img" />
+      <p class="rentcar-brand">Hertz</p>
+      <p class="rentcar-model">Chevrolet Spark</p>
+      <p class="rentcar-type">or similar Small</p>
+      <div class="rentcar-info">
+        <span>👤 2</span><span>💼 2</span><span>🚪 2/4</span>
+      </div>
+      <div class="rentcar-footer">
+        <span class="rentcar-price">$38 <span class="rentcar-unit">/day</span></span>
+        <button class="rentcar-btn">View Deal</button>
+      </div>
+    </div>
+
+    <!-- 차량 2 -->
+    <div class="rentcar-card">
+      <img src="src/images/s-001.jpg" alt="Nissan Sentra" class="rentcar-img" />
+      <p class="rentcar-brand">TURO</p>
+      <p class="rentcar-model">Nissan Sentra</p>
+      <p class="rentcar-type">or similar Small</p>
+      <div class="rentcar-info">
+        <span>👤 4</span><span>💼 2</span><span>🚪 4-5</span>
+      </div>
+      <div class="rentcar-footer">
+        <span class="rentcar-price">$35 <span class="rentcar-unit">/day</span></span>
+        <button class="rentcar-btn">View Deal</button>
+      </div>
+    </div>
+
+  
+    <!-- 차량 3 -->
+    <div class="rentcar-card">
+      <img src="src/images/s-001.jpg" alt="Nissan Sentra" class="rentcar-img" />
+      <p class="rentcar-brand">TURO</p>
+      <p class="rentcar-model">Nissan Sentra</p>
+      <p class="rentcar-type">or similar Small</p>
+      <div class="rentcar-info">
+        <span>👤 4</span><span>💼 2</span><span>🚪 4-5</span>
+      </div>
+      <div class="rentcar-footer">
+        <span class="rentcar-price">$35 <span class="rentcar-unit">/day</span></span>
+        <button class="rentcar-btn">View Deal</button>
+      </div>
+    </div>
+    <!-- 차량 4 -->
+    <div class="rentcar-card">
+      <img src="src/images/s-001.jpg" alt="Nissan Sentra" class="rentcar-img" />
+      <p class="rentcar-brand">TURO</p>
+      <p class="rentcar-model">Nissan Sentra</p>
+      <p class="rentcar-type">or similar Small</p>
+      <div class="rentcar-info">
+        <span>👤 4</span><span>💼 2</span><span>🚪 4-5</span>
+      </div>
+      <div class="rentcar-footer">
+        <span class="rentcar-price">$35 <span class="rentcar-unit">/day</span></span>
+        <button class="rentcar-btn">View Deal</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- 렌트카 섹션 -->
+
+    </aside>
+
+  </div>
+</div>
+
+
+  <!-- 아래 회사정보 -->
+  <footer class="footer">
+  <div class="res-site-container">
+    
+    <!-- 좌측 -->
+    <div class="footer-left">
+      <h1 class="footer-logo">KOREAPORTAL</h1>
+    </div>
+
+    <!-- 우측 -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="#">업소록</a>
+        <a href="#">마켓플레이스</a>
+        <a href="#">K-Wave팬클럽</a>
+        <a href="#">오픈보드</a>
+        <a href="#">교육</a>
+        <a href="#">지역정보</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 💡 점선: footer-inner 밖에서 전체 너비로! -->
+  <div class="footer-divider"></div>
+
+  <!-- 아래 회사정보 -->
+  <div class="res-site-container">
+    <div class="footer-left">
+      <div class="footer-links">
+        <a href="#">회사소개</a> |
+        <a href="#">이용약관</a> |
+        <a href="#">개인정보정책</a> |
+        <a href="#">제휴안내</a> |
+        <a href="#">광고안내</a> |
+        <a href="#">고객센터</a>
+      </div>
+      <div class="footer-address">
+        LA OFFICE 3450 Wilshire Blvd. #1210, Los Angeles, CA 90010 TEL 646-663-1510<br />
+        ©2025 ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

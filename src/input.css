@@ -623,8 +623,8 @@
   .best-grid { @apply order-3 lg:order-3 space-y-6;}
   .best-item { @apply pb-6 border-b border-gray-200; }
 
-  .sub-section { @apply my-4 flex items-end justify-between border-b border-gray-300; }
-  .sub-section-title { @apply text-2xl font-bold;}
+  .sub-section { @apply my-6 flex items-end justify-between border-b border-gray-300; }
+  .sub-section-title { @apply text-xl font-bold;}
   .sub-section-link { @apply text-sm text-gray-600 hover:underline; }
 
   .best-thumb { @apply shrink-0 block w-full sm:w-[320px] h-[180px] sm:h-[200px] overflow-hidden rounded; }
@@ -691,4 +691,222 @@
   .popular-text {  @apply text-[15px] leading-snug;}
 
   .popular-category {  @apply text-sm text-orange-600;  }
+
+
+  /* 여행 필수코스 카드 */
+
+  .section-tour { @apply mt-10 space-y-4; }
+  .tour-card { @apply grid grid-cols-1 md:grid-cols-[360px_minmax(0,1fr)] gap-5 p-4 rounded border shadow-sm bg-white; }
+  .tour-card__thumb { @apply w-full h-[220px] md:h-full object-cover rounded; }
+  .tour-card__body { @apply flex flex-col gap-3; }
+  .tour-card__title { @apply text-lg md:text-xl font-semibold leading-snug; }
+  .tour-card__meta { @apply space-y-2 text-gray-600; }
+  .tour-card__icon { @apply flex items-center gap-2; }
+  .tour-card__price { @apply text-gray-700; }
+  .tour-card__price span { @apply font-extrabold; }
+  .tour-card__button { @apply btn-primary self-start;}
+
+  /* 꼭 가볼만한 곳 */
+  .mustgo-grid { @apply grid grid-cols-2 md:grid-cols-4 gap-4; }
+  .mustgo-card { @apply relative block aspect-[4/3] overflow-hidden rounded; }
+  .mustgo-card__img { @apply w-full h-full object-cover; }
+  .mustgo-card__label { @apply absolute left-2 bottom-2 bg-black/60 text-white text-sm px-2 py-1 rounded; }
+
+  /* 호텔 리뷰 (유튜브 스타일) */
+  .yt-row { @apply grid grid-cols-[168px_minmax(0,1fr)] gap-4; }
+  .yt-thumb { @apply relative block w-full h-[95px] overflow-hidden rounded; }
+  .yt-duration { @apply absolute right-1.5 bottom-1.5 bg-black/80 text-white text-xs px-1.5 py-0.5 rounded; }
+  .yt-body { @apply min-w-0; }
+  .yt-title { @apply text-base font-semibold leading-snug line-clamp-2; }
+  .yt-meta { @apply text-sm text-gray-500; }
+  .yt-img { @apply w-full h-full object-cover;}
+
+  /* 로컬들만 가는 곳 (노멀 그리드) */
+  .local-grid { @apply grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4; }
+  .local-card { @apply rounded-2xl bg-gray-100/70 shadow-sm hover:shadow-md transition border border-gray-200; }
+  .local-card__img { @apply w-full h-[150px] object-cover; }
+  .local-card__body { @apply p-5 space-y-2; }
+  .local-card__title { @apply text-lg font-semibold; }
+  .local-card__desc { @apply text-sm text-gray-700; }
+  .local-card__meta { @apply mt-3 flex items-center gap-6 text-gray-800 text-sm; }
+  .local-meta i { @apply mr-1 text-gray-600; }
+
+  /* 헤더 */
+  .list-title { @apply text-xl font-bold; }
+  .list-count { @apply text-sm text-gray-600; }
+
+  .list-toolbar { @apply flex items-center justify-between; }
+  .list-toolbar_right { @apply flex items-center gap-4;}
+
+  .btn-primary { @apply px-4 py-2 rounded-md bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700; }
+
+  /* 정렬 */
+  .list-sort { @apply flex items-center justify-end text-sm; }
+  .list-sort__link { @apply text-gray-500 hover:text-gray-900; }
+  .list-sort__link--active { @apply text-gray-900 font-semibold; }
+  .list-sort__line { @apply mx-2 text-gray-300;}
+
+  /* 행(row) */
+  .post-row {
+    @apply grid gap-4 grid-cols-[120px_minmax(0,1fr)] sm:grid-cols-[140px_minmax(0,1fr)] md:grid-cols-[160px_minmax(0,1fr)];
+    @apply pb-4 border-b border-gray-200;
+  }
+  .post-thumb { @apply block w-full h-[80px] sm:h-[92px] md:h-[100px] overflow-hidden bg-gray-100; }
+  .post-body { @apply min-w-0; }
+
+  .post-title { @apply text-[17px] font-semibold text-gray-900 truncate; }
+  .post-meta { @apply text-sm text-gray-500 mt-1; }
+  .post-img { @apply w-full h-full object-cover;}
+  .post-tags { @apply text-[13px] text-gray-500 mt-1 leading-relaxed line-clamp-1 md:line-clamp-2; }
+
+  /* 페이지네이션 */
+  .pagination { @apply flex items-center justify-center gap-2; }
+  .page-btn { @apply inline-flex items-center justify-center w-8 h-8 rounded border border-gray-300 text-sm text-gray-700 hover:bg-gray-50; }
+  .page-btn--active { @apply bg-indigo-600 text-white border-indigo-600; }
+
+  /* 컨테이너 */
+  .write-wrap { @apply mt-10 space-y-4;  }
+  .write-head { @apply flex items-center justify-between; }
+  .write-title { @apply text-2xl font-bold; }
+  .btn-ghost { @apply text-sm text-gray-400 hover:text-gray-600; }
+
+  .write-card { @apply space-y-5 p-6 border rounded-lg bg-white; }
+
+  /* 폼 공통 */
+  .form-row { @apply flex gap-4; }
+  .form-label { @apply text-sm text-gray-600; }
+  .kp-form-category { @apply form-row items-center gap-3; }
+  .kp-form-options{ @apply flex items-center gap-2; }
+  .input-text { @apply w-full border rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-indigo-500; }
+  .char-count { @apply absolute right-2 top-1/2 -translate-y-1/2 text-[12px] text-gray-400; }
+
+  .select { @apply appearance-none border rounded-md px-3 py-2 pr-9 outline-none focus:ring-2 focus:ring-indigo-500; }
+  .select-caret { @apply pointer-events-none absolute inset-y-0 right-2 flex items-center text-gray-400; }
+
+  .btn-upload { @apply inline-flex items-center gap-2 border rounded-md px-3 py-2 text-sm bg-gray-50 hover:bg-gray-100 cursor-pointer; }
+  .btn-upload i { @apply text-gray-600; }
+  .btn-photo-row {  @apply ml-auto flex items-center gap-2; }
+  /* 에디터 */
+  .editor { @apply border rounded-md; }
+  .editor-toolbar { @apply flex flex-wrap items-center gap-2 border-b px-3 py-2 bg-gray-50; }
+  .tb { @apply text-sm text-gray-600 px-2 py-1 rounded hover:bg-gray-100; }
+  .sep { @apply mx-1 h-4 w-px bg-gray-200 inline-block; }
+  .editor-area { @apply w-full p-4 min-h-[320px] outline-none; }
+
+  /* 제출 */
+  .submit-row { @apply flex items-center justify-center pt-2; }
+  .btn-primary-lg { @apply px-8 py-3 rounded bg-indigo-700 text-white font-semibold hover:bg-indigo-800; }
+
+  /* 배경 사선 패턴 */
+  .kp-bg {
+    background-image: repeating-linear-gradient(135deg,#e9f0fb 0 2px,transparent 2px 8px);
+  }
+
+  .create-container { @apply min-h-screen py-12;}
+  /* 카드 */
+  .kp-card { @apply mx-auto w-full max-w-[760px] rounded bg-white/95 p-8 shadow-sm border; }
+
+  /* 헤더 */
+  .kp-head { @apply flex items-center justify-between mb-6; }
+  .kp-logo { @apply text-4xl tracking-widest font-extrabold text-indigo-900; }
+  .kp-head-title { @apply text-xl font-semibold text-indigo-700; }
+
+  /* 구분선 */
+  .kp-sep { @apply my-3 border-gray-200; }
+
+  /* 폼 공통 */
+  .kp-form { @apply space-y-4; }
+  .kp-row { @apply grid grid-cols-[120px_minmax(0,1fr)] gap-4; }
+  .kp-label { @apply text-gray-700 pt-2; }
+  .kp-option { @apply inline-flex items-center gap-2;}
+  .kp-center { @apply flex items-center gap-8;}
+  .req { @apply text-red-500 mr-1; }
+
+  .kp-input {
+    @apply w-full border border-gray-300 rounded-md px-3 py-2.5
+           focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500;
+  }
+
+  .kp-radio { @apply h-4 w-4 rounded-full border-gray-400 text-indigo-600 focus:ring-indigo-500; }
+  .kp-checkbox { @apply mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500; }
+
+  .kp-consent { @apply space-y-3 pt-2; }
+ .kp-box { @apply  inline-flex items-start gap-3;}
+  .kp-terms { @apply text-sm text-gray-600 leading-6; }
+  .kp-signup { @apply text-[15px] leading-6 text-gray-700;}
+  .kp-link { @apply text-indigo-700 underline underline-offset-2 hover:text-indigo-800; }
+
+  .kp-cta {
+    @apply w-full rounded bg-indigo-800 text-white font-semibold tracking-wide
+           py-3.5 mt-2 hover:bg-indigo-900;
+  }
+
+  /* 배경 (옵션, 필요하면 유지) */
+
+.signin-container {
+  @apply min-h-screen flex items-center justify-center bg-gray-50;
+}
+
+/* 로그인 박스 */
+.login-box {
+  @apply w-full max-w-md bg-white p-8 shadow border rounded;
+}
+
+/* 헤더 (로고 + 링크) */
+.login-header {
+  @apply flex justify-between items-center mb-6;
+}
+
+/* 로고 이미지 */
+.login-logo {
+  @apply h-8;
+}
+
+/* 상단 링크 */
+.login-link {
+  @apply text-blue-700 font-semibold hover:underline;
+}
+
+/* 폼 */
+.login-form {
+  @apply space-y-4;
+}
+
+/* 레이블 + 입력 필드 래퍼 */
+.login-field {
+  @apply flex items-center;
+}
+
+.login-label {
+  @apply w-24 text-gray-700;
+}
+
+.login-input {
+  @apply flex-1 border border-gray-300 rounded px-3 py-2 
+         focus:outline-none focus:ring focus:ring-blue-300;
+}
+
+/* 구분선 */
+.login-divider {
+  @apply my-4;
+}
+
+/* 하단 링크들 */
+.login-footer {
+  @apply flex justify-between text-sm;
+}
+
+.login-footer a:first-child {
+  @apply text-blue-600 hover:underline;
+}
+
+.login-footer a:last-child {
+  @apply text-gray-500 italic hover:underline;
+}
+
+/* 버튼 */
+.login-btn {
+  @apply w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded mt-4;
+}
+
 }

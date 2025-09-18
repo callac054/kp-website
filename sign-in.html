@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="뉴욕 한인 여행자들을 위한 최고의 가이드! 맛집, 호텔, 관광지 정보 제공." />
+  <meta property="og:image" content="./src/images/social-preview.jpg" />
+  <title>KPGUIDE New York 뉴욕여행</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+ <link rel="stylesheet" href="./dist/output.css" />
+
+</head>
+<body>
+  <div class="b-full-bar">
+    <div class="site-container">
+
+  <!-- 모바일에만 보이는 버튼 -->
+<div class="city-label sm:hidden block">
+  <button onclick="document.getElementById('city-menu').classList.toggle('hidden')">
+   도시 선택 <span class="search-icon"><i class="fa-solid fa-bars"></i></span>
+  </button>
+</div>
+
+<!-- 도시 메뉴 리스트 -->
+<ul id="city-menu" class="city-nav sm:flex hidden">
+  <li><a href="#">LA</a></li>
+  <li><a href="#" class="active">NY/NJ</a></li>
+  <li><a href="#">SF</a></li>
+  <li>Seattle</li>
+  <li>Chicago</li>
+  <li>Dallas</li>
+  <li>D.C./Virginia</li>
+  <li>Atlanta</li>
+  <li>Toronto</li>
+  <li>Vancouver</li>
+  <li>Australia</li>
+</ul>
+
+      
+    </div>
+  </div>
+
+ 
+
+
+  <div class="site-container">
+    <header class="site-header">
+      <a class="logo" href="/"><img src="./src/images/logo.png" alt="KPGUIDE Logo" class="logo-img" /></a>
+   <!--  <div class="search-item">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="검색어 입력" />
+          <span class="search-icon"><i class="fas fa-search"></i></span>
+        </div> 
+
+      </div>-->
+ <!-- SearchBar  -->
+<form class="header-search">
+  <div class="search-bar">
+  <input type="text" name="query"  placeholder="검색어를 입력하세요"  class="search-bar__input" />
+  <button type="submit" class="search-bar__button">
+ 
+    <svg  xmlns="http://www.w3.org/2000/svg"   class="search-bar__icon"  fill="none"  viewBox="0 0 24 24" stroke="currentColor"
+      stroke-width="2" >
+      <path stroke-linecap="round" stroke-linejoin="round"  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 7.5 7.5a7.5 7.5 0 0 0 9.15 9.15z"  />
+    </svg>
+  </button>
+  </div>
+</form>
+      <div class="login-button">
+        <a href="#" class="auth-button">회원가입</a>
+        <a href="#" class="auth-button">로그인</a>
+      </div>
+    </header>
+ <div class="main-menu">
+    <nav aria-label="Primary">
+      <ul class="main-menu__list">
+        <li class="main-menu__item">
+          <a href="/" class="main-menu__link">홈</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="/news" class="main-menu__link">여행</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="/community" class="main-menu__link">맛집</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="/events" class="main-menu__link">Korea Friday</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="/travel" class="main-menu__link">생활정보</a>
+        </li>
+         <li class="main-menu__item">
+          <a href="/travel" class="main-menu__link  main-menu__link--w">글쓰기</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- ✅ Page Container -->
+
+<div class="site-container">
+  <div class="signin-container kp-bg">
+  <div class="login-box -mt-14">
+    
+    <!-- 로고와 타이틀 -->
+    <div class="login-header">
+      <h1>
+        <img src="./src/images/logo-signup.png" alt="KPGUIDE" class="login-logo">
+      </h1>
+      <a href="#" class="login-link">SIGN IN | 로그인</a>
+    </div>
+
+    <!-- 로그인 폼 -->
+    <form class="login-form">
+      <!-- 이메일 -->
+      <div class="login-field">
+        <label class="login-label">이메일</label>
+        <input type="email" placeholder="Please enter your email" class="login-input">
+      </div>
+
+      <!-- 비밀번호 -->
+      <div class="login-field">
+        <label class="login-label">비밀번호</label>
+        <input type="password" placeholder="Please enter your password" class="login-input">
+      </div>
+
+      <hr class="login-divider">
+
+      <!-- 하단 링크 -->
+      <div class="login-footer">
+        <a href="#">회원가입 바로가기</a>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <!-- 버튼 -->
+      <button type="submit" class="login-btn">
+        SIGN IN
+      </button>
+    </form>
+  </div>
+  </div>
+</div>
+
+
+</div>
+
+
+  <!-- 아래 회사정보 -->
+  <footer class="footer">
+  <div class="res-site-container">
+    
+    <!-- 좌측 -->
+    <div class="footer-left">
+      <h1 class="footer-logo">KOREAPORTAL</h1>
+    </div>
+
+    <!-- 우측 -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="#">업소록</a>
+        <a href="#">마켓플레이스</a>
+        <a href="#">K-Wave팬클럽</a>
+        <a href="#">오픈보드</a>
+        <a href="#">교육</a>
+        <a href="#">지역정보</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 💡 점선: footer-inner 밖에서 전체 너비로! -->
+  <div class="footer-divider"></div>
+
+  <!-- 아래 회사정보 -->
+  <div class="res-site-container">
+    <div class="footer-left">
+      <div class="footer-links">
+        <a href="#">회사소개</a> |
+        <a href="#">이용약관</a> |
+        <a href="#">개인정보정책</a> |
+        <a href="#">제휴안내</a> |
+        <a href="#">광고안내</a> |
+        <a href="#">고객센터</a>
+      </div>
+      <div class="footer-address">
+        LA OFFICE 3450 Wilshire Blvd. #1210, Los Angeles, CA 90010 TEL 646-663-1510<br />
+        ©2025 ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
